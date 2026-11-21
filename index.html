@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="shell-type" content="web_standard" />
+  <meta name="description" content="Website Profil Resmi Kelompok Tani Mekar Jaya (KTMJ / KTMekarJaya) - Desa Sumber Makmur, Kecamatan Mentaya Hilir Utara, Kabupaten Kotawaringin Timur. SK Kades No. /KPTS/SM-MHU/I/2026." />
+  <title>Kelompok Tani Mekar Jaya (KTMJ) — Desa Sumber Makmur</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo-kt-mekar-jaya.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Horizontal Carousel Alignment & Scrollbar */
+    .carousel-edge-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @media (min-width: 1024px) {
+      .carousel-edge-padding {
+        padding-left: max(2rem, calc((100vw - 80rem) / 2 + 2rem));
+        padding-right: max(2rem, calc((100vw - 80rem) / 2 + 2rem));
+      }
+    }
+    .gallery-scroll-track {
+      scrollbar-width: thin;
+      scrollbar-color: #005420 #dce2f7;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gallery-scroll-track::-webkit-scrollbar {
+      height: 8px;
+    }
+    .gallery-scroll-track::-webkit-scrollbar-track {
+      background: rgba(220, 226, 247, 0.6);
+      border-radius: 9999px;
+    }
+    .gallery-scroll-track::-webkit-scrollbar-thumb {
+      background: #005420;
+      border-radius: 9999px;
+    }
+    .gallery-scroll-track.is-dragging {
+      scroll-snap-type: none !important;
+      cursor: grabbing !important;
+      user-select: none;
+    }
+    .bg-agri-pattern {
+      background-image: radial-gradient(rgba(0, 84, 32, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-primary": "#87d990",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#6d5200",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#95f8a7",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdf9a",
+            "on-primary-fixed": "#002108",
+            "surface-container-highest": "#dce2f7",
+            "on-tertiary-fixed-variant": "#005323",
+            "inverse-surface": "#293040",
+            "primary-container": "#1b6e32",
+            "on-surface-variant": "#40493f",
+            "primary-fixed-dim": "#87d990",
+            "tertiary": "#005424",
+            "surface-tint": "#196c31",
+            "secondary": "#785a00",
+            "background": "#f9f9ff",
+            "secondary-container": "#fdc425",
+            "surface": "#f9f9ff",
+            "inverse-on-surface": "#edf0ff",
+            "on-primary-fixed-variant": "#00531f",
+            "surface-container": "#e9edff",
+            "on-secondary-fixed": "#251a00",
+            "outline-variant": "#bfc9bc",
+            "on-primary-container": "#9beea3",
+            "on-background": "#141b2b",
+            "surface-container-low": "#f1f3ff",
+            "surface-container-high": "#e1e8fd",
+            "on-tertiary-fixed": "#00210a",
+            "on-tertiary-container": "#8df09f",
+            "tertiary-container": "#006f31",
+            "on-surface": "#141b2b",
+            "surface-dim": "#d3daef",
+            "primary-fixed": "#a3f6aa",
+            "outline": "#707a6e",
+            "on-secondary-fixed-variant": "#5a4300",
+            "on-primary": "#ffffff",
+            "surface-variant": "#dce2f7",
+            "tertiary-fixed-dim": "#79db8d",
+            "secondary-fixed-dim": "#f7be1d",
+            "error": "#ba1a1a",
+            "primary": "#005420",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f9f9ff"
+          },
+          fontFamily: {
+            sans: ["Hanken Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Supabase JS SDK via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-surface font-sans text-base text-on-surface antialiased relative selection:bg-primary selection:text-white">
+
+  <!-- GLOBAL FIXED TRANSPARENT WATERMARK LAYER -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-[0.06]"
+      style="background-image: url('assets/images/penyerahan-alsintan-saprodi.jpg');"
+    ></div>
+    <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl"></div>
+    <div class="absolute top-1/3 -right-32 w-[420px] h-[420px] rounded-full bg-secondary-container/15 blur-3xl"></div>
+    <div class="absolute -bottom-32 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl"></div>
+  </div>
+
+  <!-- ======================================================================== -->
+  <!-- HEADER / NAVIGATION BAR                                                  -->
+  <!-- ======================================================================== -->
+  <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/40 shadow-[0_1px_10px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 min-w-0 shrink-0 group">
+        <img
+          alt="Logo KT Mekar Jaya Desa Sumber Makmur"
+          class="w-11 h-11 rounded-full object-cover shrink-0 border-2 border-primary/25 shadow-sm"
+          src="assets/images/logo-kt-mekar-jaya.jpg"
+        />
+        <div class="flex flex-col min-w-0">
+          <div class="flex items-center gap-2">
+            <span id="nav-group-name" class="text-lg font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">
+              KT Mekar Jaya
+            </span>
+            <span class="px-1.5 py-0.5 bg-primary/10 text-primary text-[11px] font-bold rounded border border-primary/20">
+              KTMJ
+            </span>
+          </div>
+          <span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider truncate">
+            Desa Sumber Makmur • Kotim
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-on-surface-variant">
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#galeri">Galeri</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#profil">Profil &amp; SK</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#komoditas">Komoditas</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#pengurus">Pengurus</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#visi-misi">Visi &amp; Misi</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#kegiatan">Program</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#kontak">Kontak</a>
+      </nav>
+
+      <!-- Action & Mobile Trigger -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a
+          href="admin.html"
+          class="hidden sm:inline-flex items-center gap-1.5 border border-outline-variant/70 bg-surface-container-low/70 hover:bg-surface-container text-on-surface text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors whitespace-nowrap"
+          title="Buka Portal Admin Pengurus"
+        >
+          <span class="material-symbols-outlined text-[17px] text-primary">admin_panel_settings</span>
+          <span>Portal Admin</span>
+        </a>
+        <a
+          class="inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
+          href="#kontak"
+        >
+          Hubungi Kami
+        </a>
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-label="Buka Menu Navigasi"
+          class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-outline-variant/60 text-on-surface hover:bg-surface-container transition-colors"
+        >
+          <span id="mobile-menu-icon" class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-b border-outline-variant/40 px-4 py-4 space-y-1 shadow-lg">
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-primary font-bold" href="#galeri">Galeri Kegiatan</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#profil">Profil &amp; Legalitas SK</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#komoditas">Komoditas Cabai &amp; Jeruk</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#pengurus">Struktur Pengurus &amp; 29 Anggota</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#visi-misi">Visi &amp; Misi (2026–2029)</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kegiatan">Program Kerja Bidang</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kontak">Kontak, WA &amp; Instagram</a>
+      <div class="pt-2 mt-2 border-t border-outline-variant/30">
+        <a class="flex items-center gap-2 py-2.5 px-3 rounded-xl bg-surface-container text-sm text-primary font-bold" href="admin.html">
+          <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+          Buka Portal Admin Pengurus
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 w-full pt-20">
+    <div class="flex flex-col w-full">
+
+      <!-- ==================================================================== -->
+      <!-- TOP UTILITY BAR / SK & LOCATION TICKER                               -->
+      <!-- ==================================================================== -->
+      <div class="w-full bg-primary text-white border-b border-primary-container py-2.5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3">
+            <span class="inline-flex items-center gap-2 font-bold uppercase tracking-wider text-secondary-fixed">
+              <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse shrink-0"></span>
+              <span id="ticker-sk-label">SK Kades No. /KPTS/SM-MHU/I/2026 • Periode 2026–2029</span>
+            </span>
+            <span class="hidden md:inline text-white/30">|</span>
+            <span class="hidden md:inline text-white/90 font-medium">
+              Desa Sumber Makmur, Kec. Mentaya Hilir Utara, Kab. Kotawaringin Timur
+            </span>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="hidden sm:inline-flex items-center gap-1">
+              <span class="text-white/75">Komoditas:</span>
+              <strong class="font-bold text-secondary-fixed">Cabai &amp; Jeruk</strong>
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 text-white font-semibold border border-white/20 text-[11px]">
+              <span class="material-symbols-outlined text-[14px]">verified</span>
+              <span>Binaan BPP Bagendang</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================== -->
+      <!-- HERO SECTION (TAMPILAN AWAL DENGAN FOTO & AKSES VIDEO KEGIATAN)      -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-12 sm:py-16 lg:py-20 border-b border-outline-variant/40 overflow-hidden">
+        <!-- Semi-Transparent Documentary Background Layer -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/pengecekan-sensor-lahan-jeruk.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.22]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/92 to-surface/75"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-transparent to-surface/95"></div>
+          <div class="absolute inset-0 bg-agri-pattern"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <!-- Left Column: Editorial & Value Proposition -->
+            <div class="lg:col-span-7 flex flex-col items-start">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/95 rounded-full text-primary text-xs font-bold uppercase tracking-wider border border-primary/25 shadow-sm">
+                <span class="material-symbols-outlined text-[16px]">agriculture</span>
+                <span>KELOMPOK TANI RESMI DESA SUMBER MAKMUR • KTMJ</span>
+              </div>
+
+              <h1 id="hero-title-display" class="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[1.18] text-on-surface font-extrabold tracking-tight mt-5">
+                Kemandirian Hortikultura, <span class="text-primary">Kesejahteraan Bersama.</span>
+              </h1>
+
+              <p id="hero-desc-display" class="text-base sm:text-lg text-on-surface-variant leading-relaxed mt-4 max-w-2xl">
+                Kelompok Tani Mekar Jaya (KTMJ) merupakan wadah resmi partisipasi, aspirasi, dan pemberdayaan petani swadaya-mandiri di Desa Sumber Makmur, Kecamatan Mentaya Hilir Utara, Kabupaten Kotawaringin Timur. Berfokus pada tanaman hortikultura unggulan cabai dan jeruk, kami menjalin kemitraan hulu-hilir, memfasilitasi saprodi, serta meningkatkan kesejahteraan seluruh anggota.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-3 mt-7">
+                <a
+                  class="inline-flex items-center gap-2 bg-primary text-white text-sm font-bold px-5 py-3.5 rounded-xl hover:bg-primary-container transition-all shadow-md"
+                  href="#galeri"
+                >
+                  <span class="material-symbols-outlined text-[20px]">view_carousel</span>
+                  <span>Galeri Foto Kegiatan</span>
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-fixed text-sm font-bold px-5 py-3.5 rounded-xl hover:opacity-95 transition-all shadow-sm border border-secondary/20"
+                  href="#video-kegiatan"
+                >
+                  <span class="material-symbols-outlined text-[20px]">play_circle</span>
+                  <span>Tonton 5 Video Lapangan</span>
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 bg-white text-on-surface text-sm font-bold px-5 py-3.5 rounded-xl border border-outline-variant/80 hover:bg-surface-container-low transition-colors shadow-sm"
+                  href="#pengurus"
+                >
+                  <span class="material-symbols-outlined text-[20px] text-primary">groups</span>
+                  <span>Struktur SK</span>
+                </a>
+              </div>
+
+              <!-- Quick Stats Row (Balanced 3-Column Layout) -->
+              <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-9 pt-7 border-t border-outline-variant/40">
+                <div class="bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
+                  <span class="text-2xl font-extrabold text-primary tracking-tight">36 Petani</span>
+                  <span class="text-xs font-semibold text-on-surface-variant mt-1">7 Pengurus &amp; 29 Anggota Resmi</span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
+                  <span class="text-2xl font-extrabold text-primary tracking-tight">2 Komoditas</span>
+                  <span class="text-xs font-semibold text-on-surface-variant mt-1">Cabai Rawit &amp; Jeruk Kebun</span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
+                  <span class="text-2xl font-extrabold text-secondary tracking-tight">2026 – 2029</span>
+                  <span class="text-xs font-semibold text-on-surface-variant mt-1">Masa Bakti SK Kepala Desa</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Tampilan Awal Visual Showcase & Institutional Identity Card -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+              <div class="w-full max-w-md bg-white/95 backdrop-blur-md rounded-2xl border border-outline-variant/50 p-5 shadow-xl space-y-4">
+                <!-- Header Identitas Logo & SK -->
+                <div class="flex items-center gap-3.5 pb-3.5 border-b border-outline-variant/30">
+                  <img
+                    alt="Lambang Resmi Kelompok Tani Mekar Jaya Desa Sumber Makmur"
+                    class="w-16 h-16 rounded-full object-contain bg-white p-1 border-2 border-primary/30 shadow-sm shrink-0"
+                    src="assets/images/logo-kt-mekar-jaya.jpg"
+                  />
+                  <div class="min-w-0">
+                    <div class="inline-flex items-center gap-1 text-[11px] font-bold text-primary uppercase tracking-wider">
+                      <span class="material-symbols-outlined text-[15px]">verified_user</span>
+                      <span id="hero-sk-badge">SK Kepala Desa No. /KPTS/SM-MHU/I/2026</span>
+                    </div>
+                    <h2 class="text-base font-extrabold text-on-surface leading-snug mt-0.5">
+                      Kelompok Tani Mekar Jaya (KTMJ)
+                    </h2>
+                    <p class="text-xs text-on-surface-variant">
+                      Disahkan 19 Januari 2026 • Kades Bpk. Supriyo
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Featured Hero Photo & Video Preview Banner -->
+                <a
+                  href="#video-kegiatan"
+                  class="block relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-outline-variant/40 group shadow-inner bg-on-surface"
+                >
+                  <img
+                    src="assets/images/pengecekan-sensor-lahan-jeruk.jpg"
+                    alt="Kegiatan Lapangan Kelompok Tani Mekar Jaya"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                  <div class="absolute top-3 left-3 bg-primary/95 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg shadow">
+                    Sorotan Lapangan
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="w-14 h-14 rounded-full bg-secondary-container/95 text-on-secondary-fixed flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <span class="material-symbols-outlined text-[32px]">play_arrow</span>
+                    </span>
+                  </div>
+                  <div class="absolute bottom-3 left-3 right-3 text-white">
+                    <p class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">
+                      7 Foto &amp; 5 Video Dokumentasi Asli
+                    </p>
+                    <p class="text-sm font-bold leading-snug">
+                      Uji Sensor Tanah Kebun Jeruk &amp; Pascapanen Cabai Rawit
+                    </p>
+                  </div>
+                </a>
+
+                <!-- Mini Strip Preview of 4 Newest Real Photos -->
+                <div class="grid grid-cols-4 gap-2">
+                  <a href="#galeri" class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant/40 block group" title="Uji Sensor Tanah Kebun Jeruk">
+                    <img src="assets/images/pengecekan-sensor-lahan-jeruk.jpg" alt="Uji Sensor Tanah" class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a href="#galeri" class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant/40 block group" title="Simulasi Pascapanen & Pemasaran Digital">
+                    <img src="assets/images/simulasi-pascapanen-pemasaran-digital.jpg" alt="Simulasi Pascapanen" class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a href="#galeri" class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant/40 block group" title="Penimbangan Digital Cabai Rawit">
+                    <img src="assets/images/penimbangan-digital-cabai-rawit.jpg" alt="Penimbangan Cabai" class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                  </a>
+                  <a href="#galeri" class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant/40 block group" title="Serah Terima Alsintan & Saprodi">
+                    <img src="assets/images/penyerahan-alsintan-saprodi.jpg" alt="Serah Terima Alsintan" class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- MITRA & PROGRAM PENDAMPINGAN (LOGO INSTANSI & PROGRAM)               -->
+      <!-- ==================================================================== -->
+      <section class="relative z-10 w-full bg-white/95 backdrop-blur-md border-b border-outline-variant/40 py-7 sm:py-9" id="mitra">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col gap-5">
+            <!-- Header Label -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-center sm:text-left">
+              <div class="inline-flex items-center justify-center sm:justify-start gap-1.5 text-[11px] font-bold uppercase tracking-widest text-primary">
+                <span class="material-symbols-outlined text-[15px]">handshake</span>
+                <span>Didukung &amp; Berkolaborasi Bersama</span>
+              </div>
+              <p class="text-xs font-semibold text-on-surface-variant">
+                Program Mahasiswa Berdampak 2026 • Universitas Darwan Ali &amp; Kemendiktisaintek
+              </p>
+            </div>
+
+            <!-- Baris 5 Logo Resmi (Ukuran Frame 100% Sama Rata 5 Kolom) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 w-full">
+              <!-- Frame 1: Tut Wuri Handayani -->
+              <div class="h-[74px] w-full flex items-center justify-center gap-3 bg-white hover:bg-surface-container-low/60 px-3.5 py-2.5 rounded-xl border border-outline-variant/50 shadow-sm transition-all" title="Tut Wuri Handayani — Kemendiktisaintek">
+                <img
+                  src="assets/images/logos/logo-tut-wuri-handayani.jpg"
+                  alt="Logo Tut Wuri Handayani"
+                  class="h-11 w-11 object-contain shrink-0"
+                />
+                <div class="text-left leading-tight min-w-0">
+                  <span class="block text-xs font-bold text-on-surface truncate">Tut Wuri Handayani</span>
+                  <span class="block text-[10px] font-medium text-on-surface-variant truncate">Kemendiktisaintek</span>
+                </div>
+              </div>
+
+              <!-- Frame 2: Diktisaintek Berdampak -->
+              <div class="h-[74px] w-full flex items-center justify-center gap-3 bg-white hover:bg-surface-container-low/60 px-3.5 py-2.5 rounded-xl border border-outline-variant/50 shadow-sm transition-all" title="Diktisaintek Berdampak">
+                <img
+                  src="assets/images/logos/logo-diktisaintek-berdampak.jpg"
+                  alt="Logo Diktisaintek Berdampak"
+                  class="h-11 w-11 object-contain shrink-0 rounded-full"
+                />
+                <div class="text-left leading-tight min-w-0">
+                  <span class="block text-xs font-bold text-on-surface truncate">Diktisaintek</span>
+                  <span class="block text-[10px] font-medium text-on-surface-variant truncate">Berdampak</span>
+                </div>
+              </div>
+
+              <!-- Frame 3: Kampus Universitas Darwan Ali (UNDA) -->
+              <div class="h-[74px] w-full flex items-center justify-center gap-3 bg-white hover:bg-surface-container-low/60 px-3.5 py-2.5 rounded-xl border border-outline-variant/50 shadow-sm transition-all" title="Universitas Darwan Ali (UNDA)">
+                <img
+                  src="assets/images/logos/logo-kampus-unda.jpg"
+                  alt="Logo Kampus Universitas Darwan Ali (UNDA)"
+                  class="h-11 w-11 object-contain shrink-0"
+                />
+                <div class="text-left leading-tight min-w-0">
+                  <span class="block text-xs font-bold text-on-surface truncate">Universitas Darwan Ali</span>
+                  <span class="block text-[10px] font-medium text-on-surface-variant truncate">Wijaya Kesuma • UNDA</span>
+                </div>
+              </div>
+
+              <!-- Frame 4: Mahasiswa Berdampak (Cropped & Ukuran Frame Sama Rata) -->
+              <div class="h-[74px] w-full flex items-center justify-center bg-white hover:bg-surface-container-low/60 px-4 py-2.5 rounded-xl border border-outline-variant/50 shadow-sm transition-all" title="Mahasiswa Berdampak">
+                <img
+                  src="assets/images/logos/logo-mahasiswa-berdampak.jpg"
+                  alt="Logo Mahasiswa Berdampak"
+                  class="h-10 sm:h-11 w-auto max-w-full object-contain"
+                />
+              </div>
+
+              <!-- Frame 5: Mahasiswa Berdampak UNDA Tahun 2026 -->
+              <div class="h-[74px] w-full sm:col-span-2 lg:col-span-1 flex items-center justify-center gap-3 bg-white hover:bg-surface-container-low/60 px-3.5 py-2.5 rounded-xl border border-outline-variant/50 shadow-sm transition-all" title="Mahasiswa Berdampak Universitas Darwan Ali Tahun 2026">
+                <img
+                  src="assets/images/logos/logo-mahasiswa-berdampak-unda-2026.jpg"
+                  alt="Logo Mahasiswa Berdampak Universitas Darwan Ali Tahun 2026"
+                  class="h-11 w-11 object-contain shrink-0 rounded-full"
+                />
+                <div class="text-left leading-tight min-w-0">
+                  <span class="block text-xs font-bold text-on-surface truncate">Tim UNDA 2026</span>
+                  <span class="block text-[10px] font-medium text-on-surface-variant truncate">Mahasiswa Berdampak</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- GALERI DOKUMENTASI BESAR (7 FOTO ASLI + 5 VIDEO GOOGLE DRIVE)        -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="galeri">
+        <!-- Dynamic Transparent Documentary Photo Background -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            id="gallery-ambient-bg"
+            src="assets/images/simulasi-pascapanen-pemasaran-digital.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.18] blur-[2px] scale-105 transition-all duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/92 via-surface-container-low/85 to-surface-container-low/95"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header & Carousel Controls -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider border border-primary/20">
+                <span class="material-symbols-outlined text-[15px]">photo_camera</span>
+                Galeri Foto &amp; Video Dokumentasi Lapangan
+              </span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl text-on-surface font-extrabold tracking-tight mt-2.5">
+                Aktivitas Nyata Petani Mekar Jaya
+              </h2>
+              <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl leading-relaxed">
+                Geser ke samping untuk melihat 7 foto dokumentasi asli berukuran besar serta tonton 5 rekaman video kegiatan lapangan di Desa Sumber Makmur.
+              </p>
+            </div>
+
+            <!-- Prev / Next Carousel Buttons & Counter -->
+            <div class="flex items-center gap-3 self-start lg:self-end shrink-0">
+              <span id="gallery-count-label" class="px-3.5 py-2.5 bg-white border border-outline-variant/50 text-on-surface rounded-xl text-xs font-bold shadow-sm">
+                Foto 1 / 7
+              </span>
+              <div class="flex items-center gap-2">
+                <button
+                  id="gallery-prev-btn"
+                  type="button"
+                  aria-label="Geser Foto Sebelumnya"
+                  class="w-11 h-11 rounded-xl bg-white hover:bg-primary hover:text-white text-on-surface border border-outline-variant/60 shadow-sm flex items-center justify-center transition-all active:scale-95"
+                >
+                  <span class="material-symbols-outlined text-[22px]">chevron_left</span>
+                </button>
+                <button
+                  id="gallery-next-btn"
+                  type="button"
+                  aria-label="Geser Foto Selanjutnya"
+                  class="w-11 h-11 rounded-xl bg-primary hover:bg-primary-container text-white border border-primary shadow-sm flex items-center justify-center transition-all active:scale-95"
+                >
+                  <span class="material-symbols-outlined text-[22px]">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Buttons Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-8">
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                data-gallery-filter="all"
+                class="px-3.5 py-2 rounded-xl border border-primary bg-primary text-white text-xs font-bold shadow-sm transition-colors"
+              >
+                Semua Foto (7)
+              </button>
+              <button
+                type="button"
+                data-gallery-filter="cabai"
+                class="px-3.5 py-2 rounded-xl border border-outline-variant/60 bg-white text-on-surface hover:border-primary text-xs font-semibold shadow-sm transition-colors"
+              >
+                Komoditas Cabai
+              </button>
+              <button
+                type="button"
+                data-gallery-filter="jeruk"
+                class="px-3.5 py-2 rounded-xl border border-outline-variant/60 bg-white text-on-surface hover:border-primary text-xs font-semibold shadow-sm transition-colors"
+              >
+                Kebun Jeruk &amp; Lahan
+              </button>
+              <button
+                type="button"
+                data-gallery-filter="pascapanen"
+                class="px-3.5 py-2 rounded-xl border border-outline-variant/60 bg-white text-on-surface hover:border-primary text-xs font-semibold shadow-sm transition-colors"
+              >
+                Pascapanen &amp; Digital
+              </button>
+              <button
+                type="button"
+                data-gallery-filter="alsintan"
+                class="px-3.5 py-2 rounded-xl border border-outline-variant/60 bg-white text-on-surface hover:border-primary text-xs font-semibold shadow-sm transition-colors"
+              >
+                Alsintan &amp; Gudang
+              </button>
+            </div>
+
+            <a
+              href="admin.html"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"
+            >
+              <span class="material-symbols-outlined text-[16px]">add_photo_alternate</span>
+              <span>Tambah / Edit Kegiatan di Portal Admin</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- HORIZONTAL SCROLLING TRACK -->
+        <div class="relative z-10 w-full">
+          <div
+            id="gallery-scroll-container"
+            class="gallery-scroll-track carousel-edge-padding flex items-stretch gap-6 overflow-x-auto snap-x snap-mandatory pb-6 pt-1 cursor-grab"
+          ></div>
+
+          <!-- Carousel Dot Indicators -->
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 flex items-center justify-between">
+            <div id="gallery-dots" class="flex items-center gap-2 flex-wrap"></div>
+            <span class="text-xs font-medium text-on-surface-variant hidden sm:inline-flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-primary">swipe</span>
+              <span>Tahan &amp; geser kartu ke samping atau gunakan tombol panah</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================================================== -->
+        <!-- SUB-SEKSI VIDEO DOKUMENTASI LAPANGAN (GOOGLE DRIVE PLAYER)         -->
+        <!-- ================================================================== -->
+        <div id="video-kegiatan" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-14 border-t border-outline-variant/50">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[15px]">videocam</span>
+                Rekaman Video Lapangan • Google Drive
+              </span>
+              <h3 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-2">
+                Video Dokumentasi Kegiatan KTMJ Mekar Jaya
+              </h3>
+              <p class="text-sm sm:text-base text-on-surface-variant mt-1 max-w-2xl">
+                Pilih salah satu dari 5 rekaman video kegiatan di daftar sebelah kanan untuk memutar langsung dokumentasi pengujian tanah, sortasi cabai rawit, dan peninjauan gudang alsintan.
+              </p>
+            </div>
+            <a
+              id="active-video-external-link"
+              href="https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white border border-outline-variant/60 hover:border-primary text-xs font-bold text-primary shadow-sm self-start md:self-auto shrink-0 transition-colors"
+            >
+              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+              <span>Buka Video di Google Drive</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Main Video Player Column (7 Cols) -->
+            <div class="lg:col-span-7 bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-lg">
+              <div class="relative w-full aspect-video bg-on-surface">
+                <iframe
+                  id="main-video-iframe"
+                  src="https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/preview"
+                  title="Video Dokumentasi Kelompok Tani Mekar Jaya"
+                  class="w-full h-full border-0"
+                  allow="autoplay; encrypted-media; fullscreen"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span id="active-video-badge" class="px-3 py-1 rounded-lg bg-primary text-white text-xs font-bold">
+                    Video 01 • Teknologi Lahan
+                  </span>
+                  <span id="active-video-location" class="text-xs font-semibold text-on-surface-variant inline-flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+                    Lahan Hortikultura Desa Sumber Makmur
+                  </span>
+                </div>
+                <h4 id="active-video-title" class="text-xl font-extrabold text-on-surface mt-1">
+                  Praktik Pengukuran pH &amp; Kesuburan Tanah Lahan Kebun
+                </h4>
+                <p id="active-video-desc" class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  Dokumentasi video pengujian kualitas tanah yang diberi perlakuan kapur pertanian (dolomit) menggunakan alat soil tester digital bersama petani KT Mekar Jaya.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5 Videos Interactive Playlist Column (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-3" id="video-playlist-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- PROFIL, LEGALITAS SK & KOMODITAS UNGGULAN                            -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="profil">
+        <!-- Transparent Background Layer -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/penimbangan-digital-cabai-rawit.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.16]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-surface/95 via-surface-container-low/88 to-surface/94"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Left Summary Box -->
+            <div class="lg:col-span-5 bg-white/95 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary">Tentang &amp; Legalitas Kami</span>
+                <h2 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1.5">
+                  Profil &amp; Dasar Pembentukan KTMJ
+                </h2>
+                <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">
+                  Berawal dari Berita Acara Pembentukan pada Senin, 19 Januari 2026, Kelompok Tani Mekar Jaya (KTMJ) menyatukan langkah petani Desa Sumber Makmur menjadi organisasi tani yang swadaya dan mandiri.
+                </p>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-outline-variant/30 space-y-3 text-sm text-on-surface">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">location_on</span>
+                  <div>
+                    <span class="text-xs font-bold uppercase text-on-surface-variant block">Kedudukan Wilayah</span>
+                    <span class="font-semibold">Desa Sumber Makmur, Kec. Mentaya Hilir Utara, Kab. Kotawaringin Timur</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">gavel</span>
+                  <div>
+                    <span class="text-xs font-bold uppercase text-on-surface-variant block">Nomor Keputusan Kepala Desa</span>
+                    <strong id="profile-sk-display" class="font-bold text-primary">/KPTS/SM-MHU/I/2026</strong>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">event</span>
+                  <div>
+                    <span class="text-xs font-bold uppercase text-on-surface-variant block">Tanggal Penetapan &amp; Masa Bakti</span>
+                    <span><strong id="profile-date-display">19 Januari 2026</strong> • Periode <strong id="profile-period-display">2026 – 2029</strong></span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">account_balance</span>
+                  <div>
+                    <span class="text-xs font-bold uppercase text-on-surface-variant block">Instansi Pembina Teknis</span>
+                    <span class="font-semibold">BPP Bagendang &amp; Dinas Pertanian dan Ketahanan Pangan Kotim</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Narrative Box -->
+            <div class="lg:col-span-7 bg-white/95 backdrop-blur-md rounded-2xl border border-outline-variant/50 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+              <div class="space-y-4 text-on-surface-variant text-base leading-relaxed">
+                <p id="profile-p1-display">
+                  Berdasarkan Keputusan Kepala Desa Sumber Makmur Kecamatan Mentaya Hilir Utara Nomor /KPTS/SM-MHU/I/2026, Kelompok Tani (KTMJ) "Mekar Jaya" dibentuk sebagai wadah resmi bagi petani dalam menyampaikan aspirasi serta melaksanakan program pembangunan pertanian, khususnya di bidang Tanaman Hortikultura.
+                </p>
+                <p id="profile-p2-display">
+                  Sebagai organisasi yang bersifat swadaya dan mandiri berlandaskan AD/ART, KTMJ Mekar Jaya berperan aktif menjalin kerjasama dengan pemerintah (Dinas Pertanian dan Ketahanan Pangan Kab. Kotawaringin Timur serta BPP Bagendang) maupun pihak ketiga, memfasilitasi penyediaan kredit/simpan pinjam, subsidi benih, pupuk, serta bantuan teknis budidaya dan pascapanen komoditas cabai dan jeruk.
+                </p>
+              </div>
+
+              <div class="pt-5 mt-6 border-t border-outline-variant/30 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full border border-primary/20">
+                  #KTMekarJaya
+                </span>
+                <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full border border-primary/20">
+                  #KTMJ_SumberMakmur
+                </span>
+                <span class="px-3 py-1 bg-surface-container text-secondary text-xs font-bold rounded-full border border-secondary/20">
+                  #MentayaHilirUtara
+                </span>
+                <span class="px-3 py-1 bg-surface-container text-on-surface text-xs font-bold rounded-full border border-outline-variant/40">
+                  #BPPBagendang
+                </span>
+                <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full border border-primary/20">
+                  #HortikulturaKotim
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SPOTLIGHT 2 KOMODITAS UNGGULAN: CABAI & JERUK -->
+          <div id="komoditas" class="mt-14 pt-12 border-t border-outline-variant/40">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary">Potensi Agribisnis Desa Sumber Makmur</span>
+                <h3 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1">
+                  Fokus Komoditas Petani: Cabai &amp; Jeruk
+                </h3>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-white rounded-xl border border-outline-variant/50 text-xs font-bold text-on-surface-variant shadow-sm self-start md:self-auto">
+                <span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+                <span>Bidang Perkebunan Tanaman Pangan &amp; Hortikultura</span>
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Card Komoditas 1: Cabai -->
+              <div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow">
+                <div class="aspect-[16/9] w-full bg-surface-container relative overflow-hidden">
+                  <img
+                    src="assets/images/penimbangan-digital-cabai-rawit.jpg"
+                    alt="Komoditas Cabai KT Mekar Jaya"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <span class="absolute top-3.5 left-3.5 bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg shadow">
+                    Komoditas Unggulan #1
+                  </span>
+                  <span class="absolute bottom-3.5 right-3.5 bg-white/95 text-on-surface text-xs font-bold px-3 py-1 rounded-lg shadow">
+                    Panen Berkala
+                  </span>
+                </div>
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-wider">Hortikultura Semusim</span>
+                    <h4 class="text-xl text-on-surface font-bold mt-1">
+                      Cabai Rawit &amp; Cabai Merah
+                    </h4>
+                    <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                      Dikelola dengan perawatan intensif, pemetikan tepat matang, serta proses sortasi kualitas (grading), penimbangan digital, dan pengemasan untuk menjaga mutu jual hasil panen anggota.
+                    </p>
+                  </div>
+                  <div class="mt-5 pt-3.5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                    <span>Penanganan: <strong>Sortasi Grade &amp; Timbang Digital</strong></span>
+                    <span class="text-primary font-bold">Prioritas Utama</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Komoditas 2: Jeruk -->
+              <div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow">
+                <div class="aspect-[16/9] w-full bg-surface-container relative overflow-hidden">
+                  <img
+                    src="assets/images/pengecekan-sensor-lahan-jeruk.jpg"
+                    alt="Komoditas Kebun Jeruk KT Mekar Jaya"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <span class="absolute top-3.5 left-3.5 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-lg shadow">
+                    Komoditas Unggulan #2
+                  </span>
+                  <span class="absolute bottom-3.5 right-3.5 bg-white/95 text-on-surface text-xs font-bold px-3 py-1 rounded-lg shadow">
+                    Kebun Produktif
+                  </span>
+                </div>
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <span class="text-xs font-bold text-secondary uppercase tracking-wider">Hortikultura Tahunan</span>
+                    <h4 class="text-xl text-on-surface font-bold mt-1">
+                      Jeruk Kebun Segar
+                    </h4>
+                    <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                      Budidaya tanaman jeruk dengan pengujian pH &amp; kesuburan tanah secara berkala, pemeliharaan tajuk teratur, serta penguatan distribusi panen buah segar bersama kelompok tani.
+                    </p>
+                  </div>
+                  <div class="mt-5 pt-3.5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                    <span>Teknologi: <strong>Uji Sensor pH &amp; Lahan Kebun</strong></span>
+                    <span class="text-secondary font-bold">Prioritas Utama</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- STRUKTUR KEPENGURUSAN & DAFTAR ANGGOTA SESUAI SK 2026-2029           -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="pengurus">
+        <!-- Transparent Documentary Background -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/video-thumbs/video-5.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.15]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-surface/94 via-surface-container-low/88 to-surface/94"></div>
+          <div class="absolute inset-0 bg-agri-pattern"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-primary">
+                Lampiran SK Kepala Desa Sumber Makmur No. /KPTS/SM-MHU/I/2026
+              </span>
+              <h2 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1">
+                Komposisi Kepengurusan &amp; Anggota KTMJ (2026–2029)
+              </h2>
+              <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl">
+                Ditetapkan di Desa Sumber Makmur pada tanggal 19 Januari 2026 oleh Kepala Desa Sumber Makmur (Bpk. Supriyo).
+              </p>
+            </div>
+            <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white text-xs font-bold shadow-sm self-start md:self-auto shrink-0">
+              <span class="material-symbols-outlined text-[18px]">groups</span>
+              <span>7 Pengurus &amp; 29 Anggota Resmi</span>
+            </div>
+          </div>
+
+          <!-- BARIS 1: 3 PENGURUS HARIAN INTI (KETUA, SEKRETARIS, BENDAHARA) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+            <!-- Ketua -->
+            <div class="bg-primary text-white p-6 rounded-2xl shadow-md flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-fixed text-xs font-bold">
+                  1 • Ketua Kelompok Tani
+                </span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[26px]">workspace_premium</span>
+              </div>
+              <div class="my-5">
+                <h3 class="text-2xl text-white font-extrabold tracking-tight">Bpk. Rosidin</h3>
+                <p class="text-white/80 text-xs font-medium mt-1">Penanggung Jawab Umum KTMJ Mekar Jaya</p>
+              </div>
+              <div class="pt-3 border-t border-white/20 text-xs text-white/85 flex items-center justify-between">
+                <span>Pengurus Inti</span>
+                <span class="font-bold">Periode 2026–2029</span>
+              </div>
+            </div>
+
+            <!-- Sekretaris -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/60 shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-primary/10 text-primary text-xs font-bold">
+                  2 • Sekretaris
+                </span>
+                <span class="material-symbols-outlined text-primary text-[24px]">description</span>
+              </div>
+              <div class="my-5">
+                <h3 class="text-2xl text-on-surface font-extrabold tracking-tight">Bpk. Muhlisin</h3>
+                <p class="text-on-surface-variant text-xs font-medium mt-1">Tata Usaha, Persuratan &amp; Pendataan Anggota</p>
+              </div>
+              <div class="pt-3 border-t border-outline-variant/30 text-xs text-on-surface-variant flex items-center justify-between">
+                <span>Pengurus Inti</span>
+                <span class="font-bold text-primary">Aktif</span>
+              </div>
+            </div>
+
+            <!-- Bendahara -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/60 shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-primary/10 text-primary text-xs font-bold">
+                  3 • Bendahara
+                </span>
+                <span class="material-symbols-outlined text-primary text-[24px]">account_balance_wallet</span>
+              </div>
+              <div class="my-5">
+                <h3 class="text-2xl text-on-surface font-extrabold tracking-tight">Bpk. Samsul Huda</h3>
+                <p class="text-on-surface-variant text-xs font-medium mt-1">Pengelolaan Keuangan &amp; Kas AD/ART</p>
+              </div>
+              <div class="pt-3 border-t border-outline-variant/30 text-xs text-on-surface-variant flex items-center justify-between">
+                <span>Pengurus Inti</span>
+                <span class="font-bold text-primary">Aktif</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BARIS 2: 4 KOORDINATOR BIDANG & UNIT USAHA (SEJAJAR 4 KOLOM) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+            <!-- Bidang 4: Peternakan & Perikanan -->
+            <div class="bg-white p-5 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-0.5 rounded-md bg-secondary/15 text-secondary text-[11px] font-bold">
+                    4 • Koordinator Bidang
+                  </span>
+                  <span class="material-symbols-outlined text-primary text-[22px]">pets</span>
+                </div>
+                <h3 class="text-lg text-on-surface font-bold">Bpk. Purwadi</h3>
+                <p class="text-xs font-semibold text-on-surface-variant mt-1 leading-snug">
+                  Bidang Peternakan dan Perikanan
+                </p>
+              </div>
+              <div class="mt-4 pt-2.5 border-t border-outline-variant/30 text-[11px] text-on-surface-variant">
+                Integrasi Ternak &amp; Perikanan
+              </div>
+            </div>
+
+            <!-- Bidang 5: Perkebunan Tanaman Pangan & Hortikultura -->
+            <div class="bg-white p-5 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-0.5 rounded-md bg-primary/10 text-primary text-[11px] font-bold">
+                    5 • Koordinator Bidang
+                  </span>
+                  <span class="material-symbols-outlined text-primary text-[22px]">eco</span>
+                </div>
+                <h3 class="text-lg text-on-surface font-bold">Bpk. Bejo</h3>
+                <p class="text-xs font-semibold text-on-surface-variant mt-1 leading-snug">
+                  Bidang Perkebunan Tanaman Pangan dan Hortikultura
+                </p>
+              </div>
+              <div class="mt-4 pt-2.5 border-t border-outline-variant/30 text-[11px] text-primary font-bold">
+                Komoditas Cabai &amp; Jeruk
+              </div>
+            </div>
+
+            <!-- Bidang 6: Humas & Kerjasama -->
+            <div class="bg-white p-5 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-0.5 rounded-md bg-secondary/15 text-secondary text-[11px] font-bold">
+                    6 • Koordinator Bidang
+                  </span>
+                  <span class="material-symbols-outlined text-primary text-[22px]">handshake</span>
+                </div>
+                <h3 class="text-lg text-on-surface font-bold">Bpk. Sukardi</h3>
+                <p class="text-xs font-semibold text-on-surface-variant mt-1 leading-snug">
+                  Bidang Humas dan Kerjasama
+                </p>
+              </div>
+              <div class="mt-4 pt-2.5 border-t border-outline-variant/30 text-[11px] text-on-surface-variant">
+                Kemitraan &amp; Komunikasi
+              </div>
+            </div>
+
+            <!-- Bidang 7: Unit Simpan Pinjam -->
+            <div class="bg-white p-5 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-2.5 py-0.5 rounded-md bg-primary/10 text-primary text-[11px] font-bold">
+                    7 • Unit Keuangan
+                  </span>
+                  <span class="material-symbols-outlined text-primary text-[22px]">savings</span>
+                </div>
+                <h3 class="text-lg text-on-surface font-bold">Ibu / Bpk. Hartatik</h3>
+                <p class="text-xs font-semibold text-on-surface-variant mt-1 leading-snug">
+                  Unit Simpan Pinjam Kelompok
+                </p>
+              </div>
+              <div class="mt-4 pt-2.5 border-t border-outline-variant/30 text-[11px] text-on-surface-variant">
+                Permodalan Swadaya Tani
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Daftar 29 Anggota Resmi Sesuai Lampiran SK -->
+          <div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-sm">
+            <button
+              id="toggle-members-btn"
+              type="button"
+              aria-expanded="true"
+              class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors"
+            >
+              <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">badge</span>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg text-on-surface font-bold">
+                    Daftar Anggota Resmi KTMJ Mekar Jaya (29 Anggota)
+                  </h3>
+                  <p class="text-xs text-on-surface-variant mt-0.5">
+                    Sesuai Lampiran Keputusan Kepala Desa Sumber Makmur Nomor: /KPTS/SM-MHU/I/2026
+                  </p>
+                </div>
+              </div>
+              <span id="members-accordion-icon" class="material-symbols-outlined text-on-surface-variant transition-transform rotate-180">expand_more</span>
+            </button>
+
+            <div id="members-list-panel" class="p-6 border-t border-outline-variant/30 bg-surface-container-low/40">
+              <div id="members-grid-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- VISI & MISI (PERIODE 2026-2029)                                      -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="visi-misi">
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/musyawarah-penyuluhan-kebun.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.14]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-surface/92 via-surface/88 to-surface/95"></div>
+          <div class="absolute inset-0 bg-agri-pattern"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Landasan Kerja AD/ART &amp; SK Desa</span>
+            <h2 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1">
+              Visi &amp; Misi Kelompok (2026–2029)
+            </h2>
+            <p class="text-sm sm:text-base text-on-surface-variant mt-2">
+              Arah strategis yang memandu setiap musyawarah tani, pengelolaan kebun cabai dan jeruk, serta kemitraan usaha tani.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <!-- Visi Card -->
+            <div class="bg-white rounded-2xl border border-outline-variant/50 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between pb-3.5 border-b border-outline-variant/30">
+                  <span class="text-sm uppercase font-bold text-primary flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span>
+                    <span>Visi Strategis</span>
+                  </span>
+                  <span class="bg-secondary text-white px-2.5 py-0.5 rounded-md text-xs font-bold">2026 – 2029</span>
+                </div>
+                <p class="text-lg sm:text-xl text-on-surface font-semibold mt-5 leading-relaxed italic">
+                  "Mewujudkan Kelompok Tani Mekar Jaya (KTMJ) yang swadaya, mandiri, dan berdaya saing sebagai wadah aspirasi serta pengembangan pertanian tanaman hortikultura (cabai dan jeruk) demi kesejahteraan petani Desa Sumber Makmur."
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center gap-2.5 text-on-surface-variant text-xs sm:text-sm font-medium">
+                <span class="material-symbols-outlined text-primary">eco</span>
+                <span>Berakar pada kemandirian organisasi tani, kelestarian kebun, dan keadilan tata niaga.</span>
+              </div>
+            </div>
+
+            <!-- Misi Card -->
+            <div class="bg-white rounded-2xl border border-outline-variant/50 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between pb-3.5 border-b border-outline-variant/30">
+                  <span class="text-sm uppercase font-bold text-on-surface flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">flag</span>
+                    <span>Misi Operasional Sesuai SK</span>
+                  </span>
+                  <span class="text-xs font-semibold text-on-surface-variant">4 Pilar Pelaksanaan</span>
+                </div>
+                <ol class="mt-5 space-y-3.5 text-on-surface text-sm leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</span>
+                    <span><strong>Pengembangan Pertanian Hortikultura:</strong> Meningkatkan fungsi dan peran aktif petani dalam budidaya tanaman hortikultura unggulan cabai dan jeruk.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</span>
+                    <span><strong>Fasilitasi Kredit, Saprodi &amp; Bantuan Teknis:</strong> Memfasilitasi penyediaan kredit/simpan pinjam, subsidi benih, pupuk, serta peralatan pertanian bagi anggota.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</span>
+                    <span><strong>Kemitraan Pemerintah &amp; Pihak Ketiga:</strong> Menjalin kerjasama erat dengan Pemkab Kotawaringin Timur, Dinas Pertanian, BPP Bagendang, dan mitra pasar.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</span>
+                    <span><strong>Kemandirian &amp; Swadaya Organisasi:</strong> Mengelola kelompok tani secara transparan, swadaya, dan mandiri berlandaskan AD/ART Kelompok Tani Mekar Jaya.</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- PROGRAM KERJA BIDANG                                                 -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="kegiatan">
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/simulasi-pascapanen-pemasaran-digital.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.15]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-tr from-surface-container-low/95 via-surface/88 to-surface-container-low/92"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-primary">Agenda Bidang Kepengurusan</span>
+              <h2 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1">
+                Program Kerja Pokok KTMJ
+              </h2>
+            </div>
+            <p class="text-sm text-on-surface-variant max-w-md">
+              Inisiatif operasional yang dijalankan sesuai pembagian bidang pada SK Kepengurusan KTMJ Mekar Jaya 2026–2029.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Program 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-between hover:border-primary shadow-sm transition-all">
+              <div>
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined">yard</span>
+                </div>
+                <span class="text-xs font-bold text-primary uppercase tracking-wider">Bidang Hortikultura</span>
+                <h3 class="text-lg text-on-surface font-bold mt-1">
+                  Budidaya Cabai, Jeruk &amp; Subsidi Saprodi
+                </h3>
+                <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  Dikoordinasikan oleh Bpk. Bejo untuk memfasilitasi penyediaan subsidi benih, pupuk, perawatan kebun, serta penanganan pascapanen.
+                </p>
+              </div>
+              <div class="pt-3.5 mt-5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                <span>Kabid: <strong>Bpk. Bejo</strong></span>
+                <span class="font-bold text-primary">Prioritas</span>
+              </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-between hover:border-primary shadow-sm transition-all">
+              <div>
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined">handshake</span>
+                </div>
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider">Humas &amp; Kerjasama</span>
+                <h3 class="text-lg text-on-surface font-bold mt-1">
+                  Kemitraan PPL, Kampus &amp; Pemasaran
+                </h3>
+                <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  Dikoordinasikan oleh Bpk. Sukardi untuk menjalin kemitraan bersama BPP Bagendang, Dinas Pertanian Kotim, serta jalur pemasaran hulu-hilir.
+                </p>
+              </div>
+              <div class="pt-3.5 mt-5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                <span>Kabid: <strong>Bpk. Sukardi</strong></span>
+                <span class="font-bold text-primary">Kemitraan</span>
+              </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-between hover:border-primary shadow-sm transition-all">
+              <div>
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined">savings</span>
+                </div>
+                <span class="text-xs font-bold text-primary uppercase tracking-wider">Unit Simpan Pinjam</span>
+                <h3 class="text-lg text-on-surface font-bold mt-1">
+                  Fasilitasi Kredit &amp; Kas Swadaya Tani
+                </h3>
+                <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  Dikelola oleh Ibu/Bpk. Hartatik bersama Bendahara (Bpk. Samsul Huda) untuk permodalan usaha tani mandiri berdasarkan AD/ART.
+                </p>
+              </div>
+              <div class="pt-3.5 mt-5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                <span>Unit: <strong>Hartatik</strong></span>
+                <span class="font-bold text-secondary">Swadaya</span>
+              </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-between hover:border-primary shadow-sm transition-all">
+              <div>
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined">pets</span>
+                </div>
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider">Peternakan &amp; Ikan</span>
+                <h3 class="text-lg text-on-surface font-bold mt-1">
+                  Integrasi Usaha Tani, Ternak &amp; Ikan
+                </h3>
+                <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                  Dikoordinasikan oleh Bpk. Purwadi guna memperkuat ketahanan ekonomi anggota dan sinergi pemanfaatan pupuk organik kebun.
+                </p>
+              </div>
+              <div class="pt-3.5 mt-5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
+                <span>Kabid: <strong>Bpk. Purwadi</strong></span>
+                <span class="font-bold text-primary">Terpadu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- KONTAK, WHATSAPP, EMAIL & INSTAGRAM RESMI                            -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="kontak">
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <img
+            src="assets/images/video-thumbs/video-2.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center opacity-[0.15]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/90 to-surface/94"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+              <!-- Contact Detail Column -->
+              <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                <div>
+                  <div class="inline-flex items-center gap-1.5 text-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-[16px]">support_agent</span>
+                    <span>Layanan &amp; Kemitraan Hortikultura KTMJ</span>
+                  </div>
+                  <h2 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-1.5">
+                    Hubungi Kelompok Tani Mekar Jaya
+                  </h2>
+                  <p class="text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed">
+                    Untuk informasi kemitraan hasil panen komoditas <strong>cabai dan jeruk</strong>, koordinasi penyuluhan, atau komunikasi kelembagaan, silakan menghubungi kontak resmi kami di bawah ini.
+                  </p>
+
+                  <!-- Contact Cards List -->
+                  <div class="mt-6 space-y-3">
+                    <!-- Lokasi -->
+                    <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30">
+                      <span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">location_on</span>
+                      <div>
+                        <h3 class="text-sm text-on-surface font-bold">Sekretariat &amp; Wilayah Desa:</h3>
+                        <p id="contact-address-display" class="text-sm text-on-surface-variant mt-0.5">
+                          Desa Sumber Makmur, Kecamatan Mentaya Hilir Utara, Kabupaten Kotawaringin Timur, Kalimantan Tengah.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Nomor Telepon / WA -->
+                    <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30">
+                      <span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">call</span>
+                      <div>
+                        <h3 class="text-sm text-on-surface font-bold">Nomor HP / WhatsApp Narahubung:</h3>
+                        <p class="text-sm text-on-surface-variant mt-0.5">
+                          <strong id="contact-phone-text" class="text-primary font-bold">+62 812-5670-5184</strong>
+                          — <span id="contact-person-text" class="font-semibold text-on-surface">Pak Pur - Anggota</span>
+                        </p>
+                        <p class="text-xs text-on-surface-variant mt-0.5">
+                          Ketua KTMJ: <strong>Bpk. Rosidin</strong> • Sekretaris: <strong>Bpk. Muhlisin</strong>
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Email & Instagram Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">mail</span>
+                        <div class="min-w-0">
+                          <h3 class="text-xs uppercase tracking-wider text-on-surface-variant font-bold">Email Resmi</h3>
+                          <a
+                            id="contact-email-link"
+                            href="mailto:ktmekarjaya26@gmail.com"
+                            class="text-sm text-primary font-bold hover:underline block truncate mt-0.5"
+                          >
+                            ktmekarjaya26@gmail.com
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">photo_camera</span>
+                        <div class="min-w-0">
+                          <h3 class="text-xs uppercase tracking-wider text-on-surface-variant font-bold">Instagram</h3>
+                          <a
+                            id="contact-ig-link"
+                            href="https://www.instagram.com/ktmekarjaya_sumbermakmur"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-primary font-bold hover:underline block truncate mt-0.5"
+                          >
+                            @ktmekarjaya_sumbermakmur
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action CTA Buttons -->
+                <div class="mt-6 pt-5 border-t border-outline-variant/30 flex flex-wrap items-center gap-2.5">
+                  <a
+                    id="contact-wa-btn"
+                    class="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:opacity-95 transition-opacity shadow-sm"
+                    href="https://wa.me/6281256705184?text=Halo%20Pak%20Pur%20/%20Pengurus%20Kelompok%20Tani%20Mekar%20Jaya%20(KTMJ%20Desa%20Sumber%20Makmur),%20saya%20ingin%20bertanya%20mengenai..."
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>Chat WhatsApp (Pak Pur)</span>
+                  </a>
+                  <a
+                    id="contact-ig-btn"
+                    class="inline-flex items-center gap-2 bg-on-surface text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary transition-colors shadow-sm"
+                    href="https://www.instagram.com/ktmekarjaya_sumbermakmur"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                    <span>@ktmekarjaya_sumbermakmur</span>
+                  </a>
+                  <a
+                    id="contact-email-btn"
+                    class="inline-flex items-center gap-2 bg-surface-container text-primary text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary hover:text-white transition-colors border border-primary/20"
+                    href="mailto:ktmekarjaya26@gmail.com"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                    <span>Kirim Email</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location Visual Column -->
+              <div class="lg:col-span-5 bg-surface-container flex flex-col">
+                <div
+                  class="w-full h-72 lg:h-full min-h-[340px] bg-cover bg-center relative flex items-end p-6"
+                  style="background-image: url('assets/images/musyawarah-penyuluhan-kebun.jpg');"
+                >
+                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-primary/25 to-transparent pointer-events-none"></div>
+                  <div class="relative z-10 bg-white/95 backdrop-blur-md p-5 rounded-xl border border-outline-variant/40 text-on-surface w-full shadow-md">
+                    <span class="text-xs font-bold text-primary flex items-center gap-1 uppercase tracking-wider">
+                      <span class="material-symbols-outlined text-[16px]">pin_drop</span>
+                      <span>Wilayah Operasional Resmi SK</span>
+                    </span>
+                    <p class="text-lg font-extrabold text-on-surface mt-1">
+                      Desa Sumber Makmur, Kec. Mentaya Hilir Utara
+                    </p>
+                    <p class="text-xs text-on-surface-variant mt-1">
+                      Kabupaten Kotawaringin Timur, Kalimantan Tengah • Wilayah Binaan BPP Bagendang
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================== -->
+  <!-- LIGHTBOX MODAL FOR GALLERY PHOTOS                                        -->
+  <!-- ======================================================================== -->
+  <div
+    id="lightbox-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightbox-title"
+  >
+    <div id="lightbox-backdrop" class="fixed inset-0 bg-on-surface/85 backdrop-blur-md"></div>
+    <div class="relative z-10 bg-white rounded-2xl border border-outline-variant/40 max-w-4xl w-full overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-outline-variant/30 bg-surface-container-low">
+        <span id="lightbox-badge" class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg">
+          Dokumentasi
+        </span>
+        <button
+          id="lightbox-close"
+          type="button"
+          aria-label="Tutup Pratinjau"
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg text-on-surface hover:bg-surface-container transition-colors"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="bg-on-surface flex items-center justify-center max-h-[68vh] overflow-hidden">
+        <img id="lightbox-img" src="" alt="" class="max-h-[68vh] w-auto object-contain" />
+      </div>
+      <div class="p-5">
+        <div id="lightbox-meta" class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider"></div>
+        <h3 id="lightbox-title" class="text-lg text-on-surface font-bold mt-1"></h3>
+        <p id="lightbox-desc" class="text-sm text-on-surface-variant mt-1.5 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================== -->
+  <!-- FOOTER                                                                   -->
+  <!-- ======================================================================== -->
+  <footer class="relative z-10 w-full bg-surface-container-low border-t border-outline-variant/40 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-outline-variant/30">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <img
+              src="assets/images/logo-kt-mekar-jaya.jpg"
+              alt="Logo KT Mekar Jaya"
+              class="w-10 h-10 rounded-full object-cover border border-outline-variant/40"
+            />
+            <div>
+              <h3 class="text-lg font-bold text-on-surface leading-tight">KT Mekar Jaya (KTMJ)</h3>
+              <span class="text-xs text-on-surface-variant font-medium">Desa Sumber Makmur</span>
+            </div>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Kelompok Tani Desa Sumber Makmur (SK Kades No. <strong>/KPTS/SM-MHU/I/2026</strong>) berdedikasi membangun kemandirian hortikultura komoditas unggulan <strong>cabai dan jeruk</strong> secara swadaya dan berkelanjutan.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider pb-2 border-b border-outline-variant/30">
+            Kelembagaan &amp; Pembina
+          </h4>
+          <div class="space-y-2 text-sm text-on-surface-variant">
+            <div>
+              <p class="text-xs font-bold text-on-surface uppercase">Pengurus Inti (2026–2029):</p>
+              <p class="mt-0.5">Ketua: Bpk. Rosidin • Sekretaris: Bpk. Muhlisin • Bendahara: Bpk. Samsul Huda</p>
+            </div>
+            <div class="pt-1">
+              <p class="text-xs font-bold text-on-surface uppercase">Instansi Pembina:</p>
+              <p class="mt-0.5">BPP Bagendang &amp; Dinas Pertanian dan Ketahanan Pangan Kab. Kotim</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider pb-2 border-b border-outline-variant/30">
+            Kontak &amp; Media Sosial Resmi
+          </h4>
+          <ul class="space-y-2 text-sm text-on-surface-variant">
+            <li>
+              <span class="text-xs font-bold text-on-surface uppercase block">Telepon / WhatsApp:</span>
+              <a id="footer-wa-link" href="https://wa.me/6281256705184" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">
+                +62 812-5670-5184 (Pak Pur - Anggota)
+              </a>
+            </li>
+            <li>
+              <span class="text-xs font-bold text-on-surface uppercase block">Email Resmi:</span>
+              <a id="footer-email-link" href="mailto:ktmekarjaya26@gmail.com" class="text-primary font-bold hover:underline">
+                ktmekarjaya26@gmail.com
+              </a>
+            </li>
+            <li>
+              <span class="text-xs font-bold text-on-surface uppercase block">Instagram:</span>
+              <a id="footer-ig-link" href="https://www.instagram.com/ktmekarjaya_sumbermakmur" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">
+                @ktmekarjaya_sumbermakmur
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Partner Logos Strip in Footer -->
+      <div class="py-6 border-b border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+          Sinergi &amp; Pendampingan Program 2026:
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-2.5">
+          <img
+            src="assets/images/logo-kt-mekar-jaya.jpg"
+            alt="KT Mekar Jaya"
+            title="Kelompok Tani Mekar Jaya Desa Sumber Makmur"
+            class="h-10 w-10 object-contain rounded-full bg-white p-0.5 border border-outline-variant/40 shadow-sm"
+          />
+          <img
+            src="assets/images/logos/logo-tut-wuri-handayani.jpg"
+            alt="Tut Wuri Handayani"
+            title="Tut Wuri Handayani — Kemendiktisaintek"
+            class="h-10 w-10 object-contain rounded-lg bg-white p-1 border border-outline-variant/40 shadow-sm"
+          />
+          <img
+            src="assets/images/logos/logo-diktisaintek-berdampak.jpg"
+            alt="Diktisaintek Berdampak"
+            title="Diktisaintek Berdampak"
+            class="h-10 w-10 object-contain rounded-full bg-white p-0.5 border border-outline-variant/40 shadow-sm"
+          />
+          <img
+            src="assets/images/logos/logo-kampus-unda.jpg"
+            alt="Universitas Darwan Ali (UNDA)"
+            title="Universitas Darwan Ali (UNDA)"
+            class="h-10 w-10 object-contain rounded-lg bg-white p-1 border border-outline-variant/40 shadow-sm"
+          />
+          <div class="h-10 bg-white px-3 py-1.5 rounded-lg border border-outline-variant/40 shadow-sm flex items-center justify-center">
+            <img
+              src="assets/images/logos/logo-mahasiswa-berdampak.jpg"
+              alt="Mahasiswa Berdampak"
+              title="Mahasiswa Berdampak"
+              class="h-7 w-auto object-contain"
+            />
+          </div>
+          <img
+            src="assets/images/logos/logo-mahasiswa-berdampak-unda-2026.jpg"
+            alt="Mahasiswa Berdampak Universitas Darwan Ali 2026"
+            title="Mahasiswa Berdampak Universitas Darwan Ali Tahun 2026"
+            class="h-10 w-10 object-contain rounded-full bg-white p-0.5 border border-outline-variant/40 shadow-sm"
+          />
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <p>© 2026 Kelompok Tani Mekar Jaya (KTMJ), Desa Sumber Makmur — Kec. Mentaya Hilir Utara.</p>
+        <div class="flex items-center gap-4">
+          <a href="admin.html" class="font-bold text-primary hover:underline inline-flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px]">admin_panel_settings</span>
+            <span>Portal Admin</span>
+          </a>
+          <span>Sistem Informasi Profil &amp; Hortikultura Desa</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
