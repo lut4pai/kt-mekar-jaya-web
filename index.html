@@ -1467,25 +1467,42 @@
                 </div>
               </div>
 
-              <!-- Location Visual Column -->
-              <div class="lg:col-span-5 bg-surface-container flex flex-col">
-                <div
-                  class="w-full h-72 lg:h-full min-h-[340px] bg-cover bg-center relative flex items-end p-6"
-                  style="background-image: url('assets/images/musyawarah-penyuluhan-kebun.jpg');"
-                >
-                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-primary/25 to-transparent pointer-events-none"></div>
-                  <div class="relative z-10 bg-white/95 backdrop-blur-md p-5 rounded-xl border border-outline-variant/40 text-on-surface w-full shadow-md">
-                    <span class="text-xs font-bold text-primary flex items-center gap-1 uppercase tracking-wider">
-                      <span class="material-symbols-outlined text-[16px]">pin_drop</span>
-                      <span>Wilayah Operasional Resmi SK</span>
+              <!-- Location Map Column (Google Maps Desa Sumber Makmur) -->
+              <div class="lg:col-span-5 bg-surface-container-low flex flex-col border-t lg:border-t-0 lg:border-l border-outline-variant/40">
+                <div class="relative w-full h-72 sm:h-80 lg:flex-1 lg:min-h-[340px] bg-surface-container">
+                  <iframe
+                    id="lokasi-map-iframe"
+                    title="Peta Lokasi Desa Sumber Makmur, Kecamatan Mentaya Hilir Utara, Kabupaten Kotawaringin Timur"
+                    src="https://maps.google.com/maps?q=Desa+Sumber+Makmur,+Mentaya+Hilir+Utara,+Kabupaten+Kotawaringin+Timur,+Kalimantan+Tengah&amp;hl=id&amp;z=13&amp;output=embed"
+                    class="w-full h-full border-0"
+                    loading="lazy"
+                    allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div class="p-4 sm:p-5 bg-white border-t border-outline-variant/40 flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:items-center lg:items-start xl:items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <span class="text-[11px] font-bold text-primary flex items-center gap-1 uppercase tracking-wider">
+                      <span class="material-symbols-outlined text-[15px]">pin_drop</span>
+                      <span>Peta Wilayah Operasional SK</span>
                     </span>
-                    <p class="text-lg font-extrabold text-on-surface mt-1">
+                    <p class="text-sm sm:text-base font-extrabold text-on-surface mt-0.5 leading-snug">
                       Desa Sumber Makmur, Kec. Mentaya Hilir Utara
                     </p>
-                    <p class="text-xs text-on-surface-variant mt-1">
-                      Kabupaten Kotawaringin Timur, Kalimantan Tengah • Wilayah Binaan BPP Bagendang
+                    <p class="text-xs text-on-surface-variant mt-0.5">
+                      Kab. Kotawaringin Timur, Kalteng • 2°43&apos;23&quot;S, 112°53&apos;45&quot;E
                     </p>
                   </div>
+                  <a
+                    id="lokasi-map-link"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Desa+Sumber+Makmur,+Mentaya+Hilir+Utara,+Kabupaten+Kotawaringin+Timur,+Kalimantan+Tengah"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-1.5 bg-primary text-white text-xs font-bold px-3.5 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm shrink-0 whitespace-nowrap"
+                  >
+                    <span class="material-symbols-outlined text-[16px]">directions</span>
+                    <span>Buka Google Maps</span>
+                  </a>
                 </div>
               </div>
             </div>

@@ -361,7 +361,12 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     instagramUrl: "https://www.instagram.com/ktmekarjaya_sumbermakmur",
     bppName: "BPP Bagendang (Kec. Mentaya Hilir Utara)",
     dinasName: "Dinas Pertanian dan Ketahanan Pangan Kab. Kotawaringin Timur (Sampit)",
-    operationalHours: "Senin – Sabtu: 07.30 – 17.00 WIB"
+    operationalHours: "Senin – Sabtu: 07.30 – 17.00 WIB",
+    coordinates: "2°43'23\"S, 112°53'45\"E",
+    mapEmbedUrl:
+      "https://maps.google.com/maps?q=Desa+Sumber+Makmur,+Mentaya+Hilir+Utara,+Kabupaten+Kotawaringin+Timur,+Kalimantan+Tengah&hl=id&z=13&output=embed",
+    mapDirectUrl:
+      "https://www.google.com/maps/search/?api=1&query=Desa+Sumber+Makmur,+Mentaya+Hilir+Utara,+Kabupaten+Kotawaringin+Timur,+Kalimantan+Tengah"
   },
 
   partnerLogos: [
