@@ -265,65 +265,94 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
       docCode: "Dok. KTMJ/GD-07",
       description:
         "Peninjauan kesiapan unit traktor tangan (hand tractor) serta ketersediaan stok pupuk karung di gudang penyimpanan Kelompok Tani Mekar Jaya Desa Sumber Makmur."
+    },
+    {
+      id: "dok-08",
+      title: "Pemeliharaan & Pemetikan Buah Tanaman Cabai Rawit di Lahan",
+      category: "Budidaya Cabai",
+      tags: "asli cabai",
+      badgeText: "08 • Budidaya & Panen Cabai",
+      badgeStyle: "bg-primary text-on-primary",
+      metricBadge: "Kebun Cabai",
+      date: "Foto Dokumentasi Asli",
+      location: "Lahan Cabai Desa Sumber Makmur",
+      image: "assets/images/video-thumbs/video-6.jpg",
+      isDummy: false,
+      commodityLabel: "Komoditas Cabai Utama",
+      docCode: "Dok. KTMJ/CB-08",
+      description:
+        "Perawatan tanaman dan pemetikan buah cabai rawit segar langsung dari pohon pada lahan budidaya petani anggota Kelompok Tani Mekar Jaya."
     }
   ],
 
   videos: [
     {
       id: "vid-01",
+      driveId: "1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ",
+      driveUrl: "https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/view?usp=sharing",
+      embedUrl: "https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/preview",
+      thumbnail: "assets/images/video-thumbs/video-6.jpg",
+      badge: "Video 01 • Budidaya & Panen Cabai",
+      title: "Pemeliharaan & Pemetikan Buah Cabai Rawit di Lahan Petani",
+      location: "Kebun Cabai Desa Sumber Makmur",
+      description:
+        "Dokumentasi jarak dekat perawatan tanaman dan pemetikan buah cabai rawit segar langsung dari pohon oleh petani anggota Kelompok Tani Mekar Jaya."
+    },
+    {
+      id: "vid-02",
       driveId: "18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL",
       driveUrl: "https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/view?usp=sharing",
       embedUrl: "https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/preview",
       thumbnail: "assets/images/video-thumbs/video-1.jpg",
-      badge: "Video 01 • Teknologi Lahan",
+      badge: "Video 02 • Teknologi Lahan",
       title: "Praktik Pengukuran pH & Kesuburan Tanah Lahan Kebun",
       location: "Lahan Hortikultura Desa Sumber Makmur",
       description:
         "Dokumentasi video pengujian kualitas tanah yang diberi perlakuan kapur pertanian (dolomit) menggunakan alat soil tester digital bersama petani KT Mekar Jaya."
     },
     {
-      id: "vid-02",
+      id: "vid-03",
       driveId: "105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR",
       driveUrl: "https://drive.google.com/file/d/105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR/view?usp=sharing",
       embedUrl: "https://drive.google.com/file/d/105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR/preview",
       thumbnail: "assets/images/video-thumbs/video-2.jpg",
-      badge: "Video 02 • Pascapanen Cabai",
+      badge: "Video 03 • Pascapanen Cabai",
       title: "Seleksi & Pemeriksaan Kualitas Fisik Cabai Rawit Segar",
       location: "Posko Pascapanen KT Mekar Jaya",
       description:
         "Proses pemeriksaan kesegaran, ukuran, dan tingkat kematangan cabai rawit merah hasil panen anggota sebelum masuk tahap penimbangan dan pengemasan."
     },
     {
-      id: "vid-03",
+      id: "vid-04",
       driveId: "1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT",
       driveUrl: "https://drive.google.com/file/d/1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT/view?usp=drive_link",
       embedUrl: "https://drive.google.com/file/d/1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT/preview",
       thumbnail: "assets/images/video-thumbs/video-3.jpg",
-      badge: "Video 03 • Administrasi & Sortasi",
+      badge: "Video 04 • Administrasi & Sortasi",
       title: "Kegiatan Sortasi Panen & Pencatatan Pembukuan Tani",
       location: "Desa Sumber Makmur, Kec. Mentaya Hilir Utara",
       description:
         "Aktivitas gotong royong ibu-ibu petani menyortir cabai rawit di tampah sembari dilakukan pencatatan administrasi hasil panen kelompok."
     },
     {
-      id: "vid-04",
+      id: "vid-05",
       driveId: "1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5",
       driveUrl: "https://drive.google.com/file/d/1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5/view?usp=sharing",
       embedUrl: "https://drive.google.com/file/d/1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5/preview",
       thumbnail: "assets/images/video-thumbs/video-4.jpg",
-      badge: "Video 04 • Analisis Sampel Tanah",
+      badge: "Video 05 • Analisis Sampel Tanah",
       title: "Pembacaan Indikator Digital Alat Ukur Kesuburan Tanah",
       location: "Kebun Hortikultura Sumber Makmur",
       description:
         "Penjelasan teknis pembacaan angka indikator pH dan kelembaban pada layar soil meter digital untuk menentukan dosis pemupukan berimbang."
     },
     {
-      id: "vid-05",
+      id: "vid-06",
       driveId: "11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt",
       driveUrl: "https://drive.google.com/file/d/11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt/view?usp=sharing",
       embedUrl: "https://drive.google.com/file/d/11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt/preview",
       thumbnail: "assets/images/video-thumbs/video-5.jpg",
-      badge: "Video 05 • Gudang Alsintan & Saprodi",
+      badge: "Video 06 • Gudang Alsintan & Saprodi",
       title: "Peninjauan Gudang Traktor Tangan & Stok Pupuk Poktan",
       location: "Gudang Saprodi KT Mekar Jaya",
       description:
