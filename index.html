@@ -167,7 +167,8 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-on-surface-variant">
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-semibold text-on-surface-variant">
+        <a class="whitespace-nowrap text-primary font-bold hover:text-primary-container transition-colors" href="#katalog">Katalog</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#galeri">Galeri</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#video-kegiatan">Video</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#profil">Profil &amp; SK</a>
@@ -181,11 +182,20 @@
       <!-- Action & Mobile Trigger -->
       <div class="flex items-center gap-2 shrink-0">
         <a
-          class="hidden sm:inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
+          class="hidden xl:inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
           href="#kontak"
         >
           Hubungi Kami
         </a>
+        <button
+          type="button"
+          data-cart-open
+          aria-label="Buka Keranjang Belanja"
+          class="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-primary/30 bg-primary/10 text-primary hover:bg-primary/15 transition-colors shrink-0"
+        >
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span data-cart-count class="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 inline-flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-fixed text-[11px] font-extrabold border-2 border-white">0</span>
+        </button>
         <button
           id="mobile-menu-btn"
           type="button"
@@ -199,7 +209,11 @@
 
     <!-- Mobile Menu Drawer -->
     <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-b border-outline-variant/40 px-4 py-4 space-y-1 shadow-lg">
-      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-primary font-bold" href="#galeri">Galeri Foto Kegiatan</a>
+      <a class="flex items-center gap-2 py-2.5 px-3 rounded-xl bg-primary/10 hover:bg-primary/15 text-sm text-primary font-bold" href="#katalog">
+        <span class="material-symbols-outlined text-[18px]">storefront</span>
+        <span>Katalog Produk Hasil Tani</span>
+      </a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#galeri">Galeri Foto Kegiatan</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#video-kegiatan">Video Dokumentasi Lapangan</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#profil">Profil &amp; Legalitas SK</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#komoditas">Komoditas Cabai &amp; Jeruk</a>
@@ -282,9 +296,16 @@
               <div class="flex flex-wrap items-center gap-3 mt-7">
                 <a
                   class="inline-flex items-center gap-2 bg-primary text-white text-sm font-bold px-5 py-3.5 rounded-xl hover:bg-primary-container transition-all shadow-md"
+                  href="#katalog"
+                >
+                  <span class="material-symbols-outlined text-[20px]">storefront</span>
+                  <span>Belanja Hasil Tani</span>
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 bg-white text-on-surface text-sm font-bold px-5 py-3.5 rounded-xl border border-outline-variant/80 hover:bg-surface-container-low transition-colors shadow-sm"
                   href="#galeri"
                 >
-                  <span class="material-symbols-outlined text-[20px]">view_carousel</span>
+                  <span class="material-symbols-outlined text-[20px] text-primary">view_carousel</span>
                   <span>Galeri Foto Kegiatan</span>
                 </a>
                 <a
@@ -484,6 +505,85 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- KATALOG PRODUK HASIL TANI (KERANJANG + PEMESANAN VIA WHATSAPP)       -->
+      <!-- ==================================================================== -->
+      <section class="relative w-full py-12 sm:py-20 border-b border-outline-variant/40 overflow-hidden scroll-mt-16 sm:scroll-mt-20" id="katalog">
+        <div class="absolute inset-0 pointer-events-none z-0">
+          <div class="absolute inset-0 bg-gradient-to-b from-surface via-white/80 to-surface"></div>
+          <div class="absolute inset-0 bg-agri-pattern"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-7">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider border border-primary/20">
+                <span class="material-symbols-outlined text-[15px]">storefront</span>
+                Katalog Produk Hasil Tani
+              </span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl text-on-surface font-extrabold tracking-tight mt-2.5">
+                Belanja Langsung dari Petani Mekar Jaya
+              </h2>
+              <p class="text-sm sm:text-base text-on-surface-variant mt-1.5 max-w-2xl leading-relaxed">
+                Sayuran &amp; cabai segar hasil panen anggota KTMJ Desa Sumber Makmur. Pilih produk, masukkan ke keranjang, lalu kirim pesanan — pembayaran &amp; pengiriman diatur langsung lewat WhatsApp.
+              </p>
+            </div>
+            <button
+              type="button"
+              data-cart-open
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold px-5 py-3 rounded-xl hover:bg-primary-container transition-colors shadow-md self-start lg:self-auto"
+            >
+              <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+              <span>Lihat Keranjang</span>
+              <span data-cart-count class="min-w-[22px] h-[22px] px-1.5 inline-flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-extrabold">0</span>
+            </button>
+          </div>
+
+          <!-- Cara Pesan (3 Langkah) -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-7">
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3 bg-white/95 p-2.5 sm:p-3.5 rounded-xl border border-outline-variant/50 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[22px]">add_shopping_cart</span>
+              </span>
+              <div class="leading-tight">
+                <span class="block text-xs sm:text-sm font-bold text-on-surface">1. Pilih Produk</span>
+                <span class="hidden sm:block text-xs text-on-surface-variant mt-0.5">Atur jumlah &amp; masukkan ke keranjang</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3 bg-white/95 p-2.5 sm:p-3.5 rounded-xl border border-outline-variant/50 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[22px]">edit_note</span>
+              </span>
+              <div class="leading-tight">
+                <span class="block text-xs sm:text-sm font-bold text-on-surface">2. Isi Data Pemesan</span>
+                <span class="hidden sm:block text-xs text-on-surface-variant mt-0.5">Nama, alamat &amp; cara pengambilan</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3 bg-white/95 p-2.5 sm:p-3.5 rounded-xl border border-outline-variant/50 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-[#25D366]/15 text-[#128C4B] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[22px]">chat</span>
+              </span>
+              <div class="leading-tight">
+                <span class="block text-xs sm:text-sm font-bold text-on-surface">3. Kirim via WhatsApp</span>
+                <span class="hidden sm:block text-xs text-on-surface-variant mt-0.5">Pembayaran &amp; transaksi bersama Pak Pur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Kategori -->
+          <div id="katalog-filters" class="flex flex-wrap items-center gap-2 mb-5" role="tablist" aria-label="Filter kategori produk"></div>
+
+          <!-- Grid Produk (dirender oleh js/katalog.js dari data `products` di js/data.js) -->
+          <div id="katalog-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4"></div>
+
+          <p id="katalog-price-note" class="mt-5 text-xs text-on-surface-variant flex items-start gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-primary shrink-0">info</span>
+            <span>Harga dapat berubah mengikuti kondisi panen &amp; harga pasar. Total akhir, ongkir, dan cara pembayaran dikonfirmasi langsung oleh Pak Pur via WhatsApp.</span>
+          </p>
         </div>
       </section>
 
@@ -1561,7 +1661,130 @@
   </footer>
 
   <!-- Scripts -->
+  <!-- ======================================================================== -->
+  <!-- KERANJANG BELANJA (FLOATING BUTTON + DRAWER + CHECKOUT VIA WHATSAPP)     -->
+  <!-- ======================================================================== -->
+  <button
+    id="cart-fab"
+    type="button"
+    data-cart-open
+    aria-label="Buka Keranjang Belanja"
+    class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 hidden items-center gap-2 bg-primary text-white font-bold text-sm pl-4 pr-3 py-3 rounded-full shadow-[0_8px_24px_rgba(0,84,32,0.35)] hover:bg-primary-container transition-all"
+  >
+    <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+    <span id="cart-fab-total" class="whitespace-nowrap">Rp 0</span>
+    <span data-cart-count class="min-w-[24px] h-6 px-1.5 inline-flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-extrabold">0</span>
+  </button>
+
+  <div id="cart-drawer" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div id="cart-backdrop" class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+    <aside
+      id="cart-panel"
+      class="absolute right-0 top-0 h-full w-full sm:max-w-md bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out"
+    >
+      <!-- Header -->
+      <div class="flex items-center justify-between gap-3 px-4 sm:px-5 py-4 border-b border-outline-variant/40 bg-primary text-white">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+          <div class="leading-tight min-w-0">
+            <h3 id="cart-title" class="text-base font-extrabold">Keranjang Belanja</h3>
+            <p class="text-[11px] text-white/80 font-medium truncate">Pemesanan &amp; pembayaran via WhatsApp Pak Pur</p>
+          </div>
+        </div>
+        <button id="cart-close" type="button" aria-label="Tutup Keranjang" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/15 hover:bg-white/25 transition-colors shrink-0">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <!-- Body (scrollable) -->
+      <div class="flex-1 overflow-y-auto overscroll-contain">
+        <!-- Empty State -->
+        <div id="cart-empty" class="flex flex-col items-center justify-center text-center px-6 py-16">
+          <span class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[34px]">remove_shopping_cart</span>
+          </span>
+          <p class="text-base font-bold text-on-surface mt-4">Keranjang masih kosong</p>
+          <p class="text-sm text-on-surface-variant mt-1">Yuk pilih sayuran &amp; cabai segar dari katalog petani Mekar Jaya.</p>
+          <a href="#katalog" data-cart-close class="mt-5 inline-flex items-center gap-2 bg-primary text-white text-sm font-bold px-5 py-3 rounded-xl hover:bg-primary-container transition-colors">
+            <span class="material-symbols-outlined text-[20px]">storefront</span>
+            <span>Lihat Katalog</span>
+          </a>
+        </div>
+
+        <!-- Items -->
+        <ul id="cart-items" class="divide-y divide-outline-variant/30 px-4 sm:px-5"></ul>
+
+        <!-- Form Data Pemesan -->
+        <form id="cart-form" class="hidden px-4 sm:px-5 pt-4 pb-5 space-y-3 border-t border-outline-variant/40 bg-surface-container-low/50" novalidate>
+          <p class="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">person</span>
+            Data Pemesan
+          </p>
+          <div>
+            <label for="cart-name" class="block text-xs font-bold text-on-surface mb-1">Nama Lengkap <span class="text-error">*</span></label>
+            <input id="cart-name" name="name" type="text" autocomplete="name" required placeholder="Contoh: Budi Santoso"
+              class="w-full rounded-xl border border-outline-variant bg-white px-3.5 py-2.5 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary" />
+          </div>
+          <div>
+            <span class="block text-xs font-bold text-on-surface mb-1">Cara Pengambilan <span class="text-error">*</span></span>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="cursor-pointer">
+                <input type="radio" name="delivery" value="Diantar ke alamat" class="peer sr-only" checked />
+                <span class="flex items-center justify-center gap-1.5 rounded-xl border border-outline-variant bg-white px-3 py-2.5 text-xs font-bold text-on-surface-variant peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">local_shipping</span> Diantar
+                </span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="delivery" value="Ambil sendiri di lokasi kelompok tani" class="peer sr-only" />
+                <span class="flex items-center justify-center gap-1.5 rounded-xl border border-outline-variant bg-white px-3 py-2.5 text-xs font-bold text-on-surface-variant peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">storefront</span> Ambil Sendiri
+                </span>
+              </label>
+            </div>
+          </div>
+          <div id="cart-address-wrap">
+            <label for="cart-address" class="block text-xs font-bold text-on-surface mb-1">Alamat Pengiriman <span class="text-error">*</span></label>
+            <textarea id="cart-address" name="address" rows="2" autocomplete="street-address" placeholder="Nama jalan, RT/RW, desa, kecamatan"
+              class="w-full rounded-xl border border-outline-variant bg-white px-3.5 py-2.5 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none"></textarea>
+          </div>
+          <div>
+            <label for="cart-note" class="block text-xs font-bold text-on-surface mb-1">Catatan (opsional)</label>
+            <textarea id="cart-note" name="note" rows="2" placeholder="Contoh: cabe yang merah semua, kirim sore hari"
+              class="w-full rounded-xl border border-outline-variant bg-white px-3.5 py-2.5 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none"></textarea>
+          </div>
+          <p id="cart-form-error" class="hidden text-xs font-semibold text-error"></p>
+        </form>
+      </div>
+
+      <!-- Footer / Checkout -->
+      <div id="cart-footer" class="hidden border-t border-outline-variant/40 px-4 sm:px-5 pt-3.5 pb-[max(1rem,env(safe-area-inset-bottom))] bg-white space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold text-on-surface-variant">Estimasi Total (<span id="cart-total-qty">0</span> item)</span>
+          <span id="cart-total" class="text-lg font-extrabold text-primary">Rp 0</span>
+        </div>
+        <p class="text-[11px] leading-snug text-on-surface-variant">Belum termasuk ongkir. Total akhir &amp; cara pembayaran (transfer / tunai / COD) dikonfirmasi oleh Pak Pur di WhatsApp.</p>
+        <button id="cart-checkout" type="button"
+          class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white text-sm sm:text-base font-extrabold px-5 py-3.5 rounded-xl shadow-md transition-colors">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.72C5.79.72.7 5.8.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.41 1.38h.01c6.25 0 11.34-5.09 11.34-11.34 0-3.03-1.18-5.88-3.31-8.02z"/></svg>
+          <span>Pesan via WhatsApp</span>
+        </button>
+        <button id="cart-clear" type="button" class="w-full text-xs font-bold text-on-surface-variant hover:text-error transition-colors py-1">
+          Kosongkan Keranjang
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Toast Notifikasi "Ditambahkan ke Keranjang" -->
+  <div id="cart-toast" class="fixed left-1/2 -translate-x-1/2 bottom-20 sm:bottom-24 z-[70] pointer-events-none opacity-0 translate-y-3 transition-all duration-300">
+    <div class="flex items-center gap-2 bg-on-surface text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-lg">
+      <span class="material-symbols-outlined text-[18px] text-inverse-primary">check_circle</span>
+      <span id="cart-toast-text">Ditambahkan ke keranjang</span>
+    </div>
+  </div>
+
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/katalog.js"></script>
 </body>
 </html>

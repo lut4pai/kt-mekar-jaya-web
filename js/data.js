@@ -395,6 +395,82 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
       subtitle: "Mahasiswa Berdampak 2026",
       image: "assets/images/logos/logo-mahasiswa-berdampak-unda-2026.jpg"
     }
+  ],
+
+  // ==========================================================================
+  // KATALOG PRODUK HASIL TANI (PEMESANAN & PEMBAYARAN HANYA VIA WHATSAPP)
+  // --------------------------------------------------------------------------
+  // - price  : harga dalam Rupiah per `unit` (ubah sesuai harga panen terbaru)
+  // - stock  : "tersedia" | "terbatas" | "habis"
+  // - step   : kelipatan jumlah pembelian (mis. 1 = per 1 kg / 1 kemasan)
+  // ==========================================================================
+  shop: {
+    whatsappNumber: "6281256705184",
+    whatsappDisplay: "+62 812-5670-5184",
+    contactName: "Pak Pur",
+    priceNote: "Harga dapat berubah mengikuti kondisi panen & harga pasar. Total akhir, ongkir, dan cara pembayaran dikonfirmasi langsung oleh Pak Pur via WhatsApp."
+  },
+  products: [
+    {
+      id: "cabe-rawit-segar",
+      name: "Cabe Rawit Segar",
+      category: "Cabai",
+      description: "Cabe rawit hasil panen pilihan kebun anggota KTMJ. Segar, bersih, dan berkualitas — dikemas rapi dalam plastik ziplock berlabel resmi.",
+      image: "assets/images/produk/cabe-rawit-segar.jpg",
+      price: 35000,
+      unit: "kemasan 0,5 kg",
+      step: 1,
+      stock: "tersedia",
+      badge: "Produk Unggulan"
+    },
+    {
+      id: "timun",
+      name: "Timun Segar",
+      category: "Sayuran",
+      description: "Timun hijau renyah dan berair, dipetik langsung dari lahan petani Desa Sumber Makmur. Cocok untuk lalapan, acar, dan jus.",
+      image: "assets/images/produk/timun.jpg",
+      price: 8000,
+      unit: "kg",
+      step: 1,
+      stock: "tersedia",
+      badge: "Petik Segar"
+    },
+    {
+      id: "terong",
+      name: "Terong Ungu",
+      category: "Sayuran",
+      description: "Terong ungu panjang dengan kulit mengkilap dan daging lembut. Pas untuk balado, sayur lodeh, maupun terong goreng.",
+      image: "assets/images/produk/terong.jpg",
+      price: 10000,
+      unit: "kg",
+      step: 1,
+      stock: "tersedia",
+      badge: ""
+    },
+    {
+      id: "kacang-panjang",
+      name: "Kacang Panjang",
+      category: "Sayuran",
+      description: "Kacang panjang muda yang renyah dan tidak berserat, diikat rapi per ikat. Cocok untuk tumisan, urap, dan lalapan.",
+      image: "assets/images/produk/kacang-panjang.jpg",
+      price: 12000,
+      unit: "kg",
+      step: 1,
+      stock: "tersedia",
+      badge: ""
+    },
+    {
+      id: "gambas",
+      name: "Gambas (Oyong)",
+      category: "Sayuran",
+      description: "Gambas/oyong segar berkulit hijau tua dengan daging lembut. Nikmat dimasak bening, tumis telur, atau sayur santan.",
+      image: "assets/images/produk/gambas.jpg",
+      price: 10000,
+      unit: "kg",
+      step: 1,
+      stock: "tersedia",
+      badge: ""
+    }
   ]
 };
 
