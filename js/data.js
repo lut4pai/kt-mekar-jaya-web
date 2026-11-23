@@ -469,7 +469,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
       name: "Gambas (Oyong)",
       category: "Sayuran",
       description: "Gambas/oyong segar berkulit hijau tua dengan daging lembut. Nikmat dimasak bening, tumis telur, atau sayur santan.",
-      image: "assets/images/produk/gambas.jpg",
+      image: "assets/images/produk/gambas.jpg?v=2",
       price: 10000,
       unit: "kg",
       step: 1,
