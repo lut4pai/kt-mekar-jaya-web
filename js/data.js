@@ -376,6 +376,11 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
       image: "assets/images/logos/logo-diktisaintek-berdampak.jpg"
     },
     {
+      name: "BIMA",
+      subtitle: "Kemendiktisaintek",
+      image: "assets/images/logos/logo-bima.png"
+    },
+    {
       name: "Universitas Darwan Ali",
       subtitle: "Wijaya Kesuma • UNDA",
       image: "assets/images/logos/logo-kampus-unda.jpg"
