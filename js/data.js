@@ -288,9 +288,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
   videos: [
     {
       id: "vid-01",
-      driveId: "1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ",
-      driveUrl: "https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/view?usp=sharing",
-      embedUrl: "https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/preview",
+      videoUrl: "assets/videos/video-1.mp4",
       thumbnail: "assets/images/video-thumbs/video-6.jpg",
       badge: "Video 01 • Budidaya & Panen Cabai",
       title: "Pemeliharaan & Pemetikan Buah Cabai Rawit di Lahan Petani",
@@ -300,9 +298,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-02",
-      driveId: "18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL",
-      driveUrl: "https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/view?usp=sharing",
-      embedUrl: "https://drive.google.com/file/d/18-kZm_IuOAAPihQNDkLEl5lnpK0aGLIL/preview",
+      videoUrl: "assets/videos/video-2.mp4",
       thumbnail: "assets/images/video-thumbs/video-1.jpg",
       badge: "Video 02 • Teknologi Lahan",
       title: "Praktik Pengukuran pH & Kesuburan Tanah Lahan Kebun",
@@ -312,9 +308,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-03",
-      driveId: "105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR",
-      driveUrl: "https://drive.google.com/file/d/105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR/view?usp=sharing",
-      embedUrl: "https://drive.google.com/file/d/105qQHufSDCHhm-dIUo8o-0-NC_jnD4yR/preview",
+      videoUrl: "assets/videos/video-3.mp4",
       thumbnail: "assets/images/video-thumbs/video-2.jpg",
       badge: "Video 03 • Pascapanen Cabai",
       title: "Seleksi & Pemeriksaan Kualitas Fisik Cabai Rawit Segar",
@@ -324,9 +318,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-04",
-      driveId: "1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT",
-      driveUrl: "https://drive.google.com/file/d/1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT/view?usp=drive_link",
-      embedUrl: "https://drive.google.com/file/d/1mIXwFWo9Pf9pdDFBbYDcEI0CFm3PiOCT/preview",
+      videoUrl: "assets/videos/video-4.mp4",
       thumbnail: "assets/images/video-thumbs/video-3.jpg",
       badge: "Video 04 • Administrasi & Sortasi",
       title: "Kegiatan Sortasi Panen & Pencatatan Pembukuan Tani",
@@ -336,9 +328,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-05",
-      driveId: "1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5",
-      driveUrl: "https://drive.google.com/file/d/1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5/view?usp=sharing",
-      embedUrl: "https://drive.google.com/file/d/1b-x7UsPotr8xYDMD14SmqcdlorUlLIh5/preview",
+      videoUrl: "assets/videos/video-5.mp4",
       thumbnail: "assets/images/video-thumbs/video-4.jpg",
       badge: "Video 05 • Analisis Sampel Tanah",
       title: "Pembacaan Indikator Digital Alat Ukur Kesuburan Tanah",
@@ -348,9 +338,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-06",
-      driveId: "11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt",
-      driveUrl: "https://drive.google.com/file/d/11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt/view?usp=sharing",
-      embedUrl: "https://drive.google.com/file/d/11LKES5ShA8-8c1jzv2NdT_k9VLFIm2jt/preview",
+      videoUrl: "assets/videos/video-6.mp4",
       thumbnail: "assets/images/video-thumbs/video-5.jpg",
       badge: "Video 06 • Gudang Alsintan & Saprodi",
       title: "Peninjauan Gudang Traktor Tangan & Stok Pupuk Poktan",

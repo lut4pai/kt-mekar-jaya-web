@@ -530,12 +530,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // 7. Render Protected Video Playlist & Click-to-Play Facade
+  // 7. Render Native HTML5 Video Playlist & Mobile Fullscreen Controller
   function renderVideoPlaylist(videos) {
     const playlistEl = document.getElementById("video-playlist-container");
-    const iframeEl = document.getElementById("main-video-iframe");
-    const posterOverlay = document.getElementById("video-poster-overlay");
-    const posterImg = document.getElementById("video-poster-img");
+    const videoEl = document.getElementById("main-video-player");
+    const fullscreenBtn = document.getElementById("btn-video-fullscreen");
     const badgeEl = document.getElementById("active-video-badge");
     const titleEl = document.getElementById("active-video-title");
     const locationEl = document.getElementById("active-video-location");
@@ -545,48 +544,44 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!playlistEl || !Array.isArray(videos) || videos.length === 0) return;
 
     let activeIdx = 0;
-    let isPlaying = false;
 
-    function startPlayback() {
-      const v = videos[activeIdx];
-      if (!v) return;
-      isPlaying = true;
-      if (posterOverlay) {
-        posterOverlay.classList.add("hidden");
-      }
-      if (iframeEl && iframeEl.getAttribute("src") !== v.embedUrl) {
-        iframeEl.setAttribute("src", v.embedUrl);
-      }
-    }
-
-    if (posterOverlay) {
-      posterOverlay.addEventListener("click", function () {
-        startPlayback();
+    // Tombol Fullscreen khusus (Mendukung Android Chrome, iOS Safari, & Desktop)
+    if (fullscreenBtn && videoEl) {
+      fullscreenBtn.addEventListener("click", function () {
+        videoEl.play().catch(function () {});
+        if (videoEl.requestFullscreen) {
+          videoEl.requestFullscreen();
+        } else if (videoEl.webkitEnterFullscreen) {
+          // Khusus iOS Safari iPhone
+          videoEl.webkitEnterFullscreen();
+        } else if (videoEl.webkitRequestFullscreen) {
+          videoEl.webkitRequestFullscreen();
+        } else if (videoEl.msRequestFullscreen) {
+          videoEl.msRequestFullscreen();
+        }
       });
     }
 
-    function selectVideo(idx, autoStart) {
+    function selectVideo(idx, autoPlay) {
       const v = videos[idx];
       if (!v) return;
       activeIdx = idx;
 
-      if (posterImg && v.thumbnail) {
-        posterImg.src = v.thumbnail;
-      }
-
-      if (autoStart) {
-        startPlayback();
-        // Di perangkat mobile, gulir lembut ke pemutar video saat memilih dari daftar putar
-        if (window.innerWidth < 1024 && videoSectionEl) {
-          videoSectionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (videoEl) {
+        const targetSrc = v.videoUrl || "";
+        if (v.thumbnail) {
+          videoEl.setAttribute("poster", v.thumbnail);
         }
-      } else {
-        isPlaying = false;
-        if (posterOverlay) {
-          posterOverlay.classList.remove("hidden");
+        if (videoEl.getAttribute("src") !== targetSrc) {
+          videoEl.pause();
+          videoEl.setAttribute("src", targetSrc);
+          videoEl.load();
         }
-        if (iframeEl) {
-          iframeEl.setAttribute("data-src", v.embedUrl);
+        if (autoPlay) {
+          videoEl.play().catch(function () {});
+          if (window.innerWidth < 1024 && videoSectionEl) {
+            videoSectionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
         }
       }
 
@@ -611,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (indicator) {
             indicator.className =
               "px-2 py-0.5 rounded bg-primary text-white text-[10px] font-bold uppercase tracking-wider shrink-0";
-            indicator.textContent = isPlaying ? "Sedang Diputar" : "Aktif";
+            indicator.textContent = "Sedang Aktif";
           }
         } else {
           card.className =
