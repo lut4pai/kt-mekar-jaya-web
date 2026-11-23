@@ -230,8 +230,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       article.innerHTML =
         // Area Gambar Bersih & Besar
-        '<div class="relative w-full h-[240px] sm:h-[340px] lg:h-[400px] bg-on-surface overflow-hidden">' +
-        '  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="' +
+        '<div class="relative w-full h-[220px] sm:h-[340px] lg:h-[400px] bg-on-surface overflow-hidden">' +
+        '  <img loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="' +
         (item.title || "").replace(/"/g, "&quot;") +
         '" src="' +
         item.image +
@@ -530,28 +530,66 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // 7. Render Google Drive Video Playlist & Main Video Switcher
+  // 7. Render Protected Video Playlist & Click-to-Play Facade
   function renderVideoPlaylist(videos) {
     const playlistEl = document.getElementById("video-playlist-container");
     const iframeEl = document.getElementById("main-video-iframe");
+    const posterOverlay = document.getElementById("video-poster-overlay");
+    const posterImg = document.getElementById("video-poster-img");
     const badgeEl = document.getElementById("active-video-badge");
     const titleEl = document.getElementById("active-video-title");
     const locationEl = document.getElementById("active-video-location");
     const descEl = document.getElementById("active-video-desc");
-    const externalLinkEl = document.getElementById("active-video-external-link");
+    const videoSectionEl = document.getElementById("video-kegiatan");
 
     if (!playlistEl || !Array.isArray(videos) || videos.length === 0) return;
 
     let activeIdx = 0;
+    let isPlaying = false;
 
-    function selectVideo(idx) {
+    function startPlayback() {
+      const v = videos[activeIdx];
+      if (!v) return;
+      isPlaying = true;
+      if (posterOverlay) {
+        posterOverlay.classList.add("hidden");
+      }
+      if (iframeEl && iframeEl.getAttribute("src") !== v.embedUrl) {
+        iframeEl.setAttribute("src", v.embedUrl);
+      }
+    }
+
+    if (posterOverlay) {
+      posterOverlay.addEventListener("click", function () {
+        startPlayback();
+      });
+    }
+
+    function selectVideo(idx, autoStart) {
       const v = videos[idx];
       if (!v) return;
       activeIdx = idx;
 
-      if (iframeEl && iframeEl.src !== v.embedUrl) {
-        iframeEl.src = v.embedUrl;
+      if (posterImg && v.thumbnail) {
+        posterImg.src = v.thumbnail;
       }
+
+      if (autoStart) {
+        startPlayback();
+        // Di perangkat mobile, gulir lembut ke pemutar video saat memilih dari daftar putar
+        if (window.innerWidth < 1024 && videoSectionEl) {
+          videoSectionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        isPlaying = false;
+        if (posterOverlay) {
+          posterOverlay.classList.remove("hidden");
+        }
+        if (iframeEl) {
+          iframeEl.setAttribute("data-src", v.embedUrl);
+        }
+      }
+
       if (badgeEl) badgeEl.textContent = v.badge || "Video " + (idx + 1);
       if (titleEl) titleEl.textContent = v.title || "";
       if (locationEl) {
@@ -560,7 +598,6 @@ document.addEventListener("DOMContentLoaded", function () {
           (v.location || "Desa Sumber Makmur");
       }
       if (descEl) descEl.textContent = v.description || "";
-      if (externalLinkEl) externalLinkEl.href = v.driveUrl || v.embedUrl;
       if (ambientBg && v.thumbnail) {
         ambientBg.setAttribute("src", v.thumbnail);
       }
@@ -570,19 +607,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const indicator = card.querySelector("[data-play-indicator]");
         if (cIdx === activeIdx) {
           card.className =
-            "group cursor-pointer bg-white rounded-2xl border-2 border-primary p-3 flex items-center gap-3.5 shadow-md transition-all";
+            "group cursor-pointer bg-white rounded-2xl border-2 border-primary p-2.5 sm:p-3 flex items-center gap-3 shadow-md transition-all";
           if (indicator) {
             indicator.className =
-              "px-2 py-0.5 rounded bg-primary text-white text-[10px] font-bold uppercase tracking-wider";
-            indicator.textContent = "Sedang Diputar";
+              "px-2 py-0.5 rounded bg-primary text-white text-[10px] font-bold uppercase tracking-wider shrink-0";
+            indicator.textContent = isPlaying ? "Sedang Diputar" : "Aktif";
           }
         } else {
           card.className =
-            "group cursor-pointer bg-white/90 hover:bg-white rounded-2xl border border-outline-variant/50 hover:border-primary/60 p-3 flex items-center gap-3.5 shadow-sm transition-all";
+            "group cursor-pointer bg-white/95 hover:bg-white rounded-2xl border border-outline-variant/50 hover:border-primary/60 p-2.5 sm:p-3 flex items-center gap-3 shadow-sm transition-all";
           if (indicator) {
             indicator.className =
-              "px-2 py-0.5 rounded bg-surface-container text-primary text-[10px] font-bold uppercase tracking-wider";
-            indicator.textContent = "Putar Video";
+              "px-2 py-0.5 rounded bg-surface-container text-primary text-[10px] font-bold uppercase tracking-wider shrink-0";
+            indicator.textContent = "Putar";
           }
         }
       });
@@ -592,37 +629,37 @@ document.addEventListener("DOMContentLoaded", function () {
     videos.forEach(function (v, idx) {
       const item = document.createElement("div");
       item.innerHTML =
-        '<div class="relative w-28 sm:w-32 aspect-video rounded-xl overflow-hidden bg-on-surface shrink-0 border border-outline-variant/30">' +
-        '  <img src="' +
+        '<div class="relative w-24 sm:w-32 aspect-video rounded-xl overflow-hidden bg-on-surface shrink-0 border border-outline-variant/30">' +
+        '  <img loading="lazy" decoding="async" src="' +
         (v.thumbnail || "assets/images/pengecekan-sensor-lahan-jeruk.jpg") +
         '" alt="' +
         (v.title || "").replace(/"/g, "&quot;") +
         '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />' +
         '  <div class="absolute inset-0 bg-black/30 flex items-center justify-center">' +
-        '    <span class="w-8 h-8 rounded-full bg-white/95 text-primary flex items-center justify-center shadow">' +
-        '      <span class="material-symbols-outlined text-[20px]">play_arrow</span>' +
+        '    <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/95 text-primary flex items-center justify-center shadow">' +
+        '      <span class="material-symbols-outlined text-[18px] sm:text-[20px]">play_arrow</span>' +
         "    </span>" +
         "  </div>" +
         "</div>" +
         '<div class="min-w-0 flex-grow">' +
-        '  <div class="flex items-center justify-between gap-2 mb-1">' +
+        '  <div class="flex items-center justify-between gap-1.5 mb-1">' +
         '    <span class="text-[11px] font-bold text-secondary truncate">' +
         (v.badge || "Video 0" + (idx + 1)) +
         "</span>" +
         '    <span data-play-indicator></span>' +
         "  </div>" +
-        '  <h5 class="text-sm font-extrabold text-on-surface group-hover:text-primary transition-colors line-clamp-2 leading-snug">' +
+        '  <h5 class="text-xs sm:text-sm font-extrabold text-on-surface group-hover:text-primary transition-colors line-clamp-2 leading-snug">' +
         v.title +
         "  </h5>" +
         "</div>";
 
       item.addEventListener("click", function () {
-        selectVideo(idx);
+        selectVideo(idx, true);
       });
       playlistEl.appendChild(item);
     });
 
-    selectVideo(0);
+    selectVideo(0, false);
   }
 
   // Initial Render Execution

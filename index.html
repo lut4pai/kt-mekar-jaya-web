@@ -12,9 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
   <style>
+    html {
+      scroll-padding-top: 5rem;
+      overflow-x: hidden;
+    }
     html, body {
       margin: 0;
       padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
       font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -125,39 +131,36 @@
 </head>
 <body class="bg-surface font-sans text-base text-on-surface antialiased relative selection:bg-primary selection:text-white">
 
-  <!-- GLOBAL FIXED TRANSPARENT WATERMARK LAYER -->
+  <!-- GLOBAL LIGHTWEIGHT WATERMARK LAYER (OPTIMIZED FOR MOBILE GPU) -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     <div
-      class="absolute inset-0 bg-cover bg-center opacity-[0.06]"
+      class="absolute inset-0 bg-cover bg-center opacity-[0.05]"
       style="background-image: url('assets/images/penyerahan-alsintan-saprodi.jpg');"
     ></div>
-    <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl"></div>
-    <div class="absolute top-1/3 -right-32 w-[420px] h-[420px] rounded-full bg-secondary-container/15 blur-3xl"></div>
-    <div class="absolute -bottom-32 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl"></div>
   </div>
 
   <!-- ======================================================================== -->
-  <!-- HEADER / NAVIGATION BAR                                                  -->
+  <!-- HEADER / NAVIGATION BAR (RESPONSIVE MOBILE-FIRST)                        -->
   <!-- ======================================================================== -->
-  <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/40 shadow-[0_1px_10px_rgba(0,0,0,0.04)]">
-    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/40 shadow-[0_1px_10px_rgba(0,0,0,0.04)]">
+    <div class="h-16 sm:h-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
       <!-- Brand Identity -->
-      <a href="#" class="flex items-center gap-3 min-w-0 shrink-0 group">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 lg:flex-initial group">
         <img
           alt="Logo KT Mekar Jaya Desa Sumber Makmur"
-          class="w-11 h-11 rounded-full object-cover shrink-0 border-2 border-primary/25 shadow-sm"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shrink-0 border-2 border-primary/25 shadow-sm"
           src="assets/images/logo-kt-mekar-jaya.jpg"
         />
         <div class="flex flex-col min-w-0">
-          <div class="flex items-center gap-2">
-            <span id="nav-group-name" class="text-lg font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">
+          <div class="flex items-center gap-1.5">
+            <span id="nav-group-name" class="text-base sm:text-lg font-bold text-on-surface tracking-tight truncate group-hover:text-primary transition-colors">
               KT Mekar Jaya
             </span>
-            <span class="px-1.5 py-0.5 bg-primary/10 text-primary text-[11px] font-bold rounded border border-primary/20">
+            <span class="px-1.5 py-0.5 bg-primary/10 text-primary text-[10px] sm:text-[11px] font-bold rounded border border-primary/20 shrink-0">
               KTMJ
             </span>
           </div>
-          <span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider truncate">
+          <span class="text-[11px] sm:text-xs font-semibold text-on-surface-variant uppercase tracking-wider truncate">
             Desa Sumber Makmur • Kotim
           </span>
         </div>
@@ -166,6 +169,7 @@
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-on-surface-variant">
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#galeri">Galeri</a>
+        <a class="whitespace-nowrap hover:text-primary transition-colors" href="#video-kegiatan">Video</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#profil">Profil &amp; SK</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#komoditas">Komoditas</a>
         <a class="whitespace-nowrap hover:text-primary transition-colors" href="#pengurus">Pengurus</a>
@@ -175,9 +179,9 @@
       </nav>
 
       <!-- Action & Mobile Trigger -->
-      <div class="flex items-center gap-2.5 shrink-0">
+      <div class="flex items-center gap-2 shrink-0">
         <a
-          class="inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
+          class="hidden sm:inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
           href="#kontak"
         >
           Hubungi Kami
@@ -186,7 +190,7 @@
           id="mobile-menu-btn"
           type="button"
           aria-label="Buka Menu Navigasi"
-          class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-outline-variant/60 text-on-surface hover:bg-surface-container transition-colors"
+          class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-outline-variant/60 bg-surface-container-low/50 text-on-surface hover:bg-surface-container transition-colors shrink-0"
         >
           <span id="mobile-menu-icon" class="material-symbols-outlined">menu</span>
         </button>
@@ -195,17 +199,23 @@
 
     <!-- Mobile Menu Drawer -->
     <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-b border-outline-variant/40 px-4 py-4 space-y-1 shadow-lg">
-      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-primary font-bold" href="#galeri">Galeri Kegiatan</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-primary font-bold" href="#galeri">Galeri Foto Kegiatan</a>
+      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#video-kegiatan">Video Dokumentasi Lapangan</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#profil">Profil &amp; Legalitas SK</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#komoditas">Komoditas Cabai &amp; Jeruk</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#pengurus">Struktur Pengurus &amp; 29 Anggota</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#visi-misi">Visi &amp; Misi (2026–2029)</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kegiatan">Program Kerja Bidang</a>
-      <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kontak">Kontak, WA &amp; Instagram</a>
+      <div class="pt-2 mt-2 border-t border-outline-variant/30">
+        <a class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary text-sm text-white font-bold shadow-sm" href="#kontak">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          <span>Hubungi Pengurus</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="relative z-10 w-full pt-20">
+  <main class="relative z-10 w-full pt-16 sm:pt-20 overflow-x-hidden">
     <div class="flex flex-col w-full">
 
       <!-- ==================================================================== -->
@@ -469,18 +479,20 @@
       </section>
 
       <!-- ==================================================================== -->
-      <!-- GALERI DOKUMENTASI BESAR (7 FOTO ASLI + 5 VIDEO GOOGLE DRIVE)        -->
+      <!-- GALERI DOKUMENTASI BESAR (8 FOTO ASLI + 6 VIDEO KEGIATAN)            -->
       <!-- ==================================================================== -->
-      <section class="relative w-full py-14 sm:py-20 border-b border-outline-variant/40 overflow-hidden" id="galeri">
+      <section class="relative w-full py-12 sm:py-20 border-b border-outline-variant/40 overflow-hidden scroll-mt-16 sm:scroll-mt-20" id="galeri">
         <!-- Dynamic Transparent Documentary Photo Background -->
         <div class="absolute inset-0 pointer-events-none z-0">
           <img
             id="gallery-ambient-bg"
             src="assets/images/simulasi-pascapanen-pemasaran-digital.jpg"
             alt=""
-            class="w-full h-full object-cover object-center opacity-[0.18] blur-[2px] scale-105 transition-all duration-700"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover object-center opacity-[0.16] transition-opacity duration-500"
           />
-          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/92 via-surface-container-low/85 to-surface-container-low/95"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/92 via-surface-container-low/86 to-surface-container-low/95"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -585,48 +597,74 @@
         </div>
 
         <!-- ================================================================== -->
-        <!-- SUB-SEKSI VIDEO DOKUMENTASI LAPANGAN (GOOGLE DRIVE PLAYER)         -->
+        <!-- SUB-SEKSI VIDEO DOKUMENTASI LAPANGAN (TERPROTEKSI TANPA AKSES LUAR) -->
         <!-- ================================================================== -->
-        <div id="video-kegiatan" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-14 border-t border-outline-variant/50">
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-            <div>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-bold uppercase tracking-wider">
-                <span class="material-symbols-outlined text-[15px]">videocam</span>
-                Rekaman Video Lapangan • Google Drive
-              </span>
-              <h3 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-2">
-                Video Dokumentasi Kegiatan KTMJ Mekar Jaya
-              </h3>
-              <p class="text-sm sm:text-base text-on-surface-variant mt-1 max-w-2xl">
-                Pilih salah satu dari 6 rekaman video kegiatan di daftar sebelah kanan untuk memutar langsung dokumentasi budidaya cabai rawit, pengujian tanah, sortasi panen, dan gudang alsintan.
-              </p>
-            </div>
-            <a
-              id="active-video-external-link"
-              href="https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white border border-outline-variant/60 hover:border-primary text-xs font-bold text-primary shadow-sm self-start md:self-auto shrink-0 transition-colors"
-            >
-              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-              <span>Buka Video di Google Drive</span>
-            </a>
+        <div id="video-kegiatan" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 pt-12 border-t border-outline-variant/50 scroll-mt-20 sm:scroll-mt-24">
+          <div class="mb-6 sm:mb-8">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-[15px]">videocam</span>
+              Rekaman Video Dokumentasi Lapangan
+            </span>
+            <h3 class="text-2xl sm:text-3xl text-on-surface font-extrabold tracking-tight mt-2">
+              Video Dokumentasi Kegiatan KTMJ Mekar Jaya
+            </h3>
+            <p class="text-sm sm:text-base text-on-surface-variant mt-1 max-w-2xl leading-relaxed">
+              Pilih salah satu dari 6 rekaman video kegiatan pada daftar putar untuk memutar langsung dokumentasi budidaya cabai rawit, pengujian tanah, sortasi panen, dan gudang alsintan.
+            </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
             <!-- Main Video Player Column (7 Cols) -->
-            <div class="lg:col-span-7 bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-lg">
-              <div class="relative w-full aspect-video bg-on-surface">
+            <div class="lg:col-span-7 bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-md">
+              <div class="relative w-full aspect-video bg-on-surface overflow-hidden select-none">
+                <!-- Iframe Video Player (Lazy-loaded on Play for fast performance) -->
                 <iframe
                   id="main-video-iframe"
-                  src="https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/preview"
+                  src=""
+                  data-src="https://drive.google.com/file/d/1xaGaRtCslue4x4jqmElpKzdAG7Sn1aeQ/preview"
                   title="Video Dokumentasi Kelompok Tani Mekar Jaya"
                   class="w-full h-full border-0"
                   allow="autoplay; encrypted-media; fullscreen"
                   allowfullscreen
                 ></iframe>
+
+                <!-- Top-Right Corner Shield: Memblokir tombol pop-out ke Google Drive -->
+                <div
+                  class="absolute top-0 right-0 z-30 w-20 h-16 flex items-start justify-end p-2.5 pointer-events-auto cursor-default"
+                  title="Dokumentasi Resmi KT Mekar Jaya"
+                  onclick="event.stopPropagation(); event.preventDefault();"
+                >
+                  <div class="bg-on-surface/95 text-white px-2.5 py-1.5 rounded-lg text-[10px] font-bold border border-white/15 shadow-md inline-flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                    <span>KTMJ</span>
+                  </div>
+                </div>
+
+                <!-- Click-to-Play Poster Facade (Membuat loading HP sangat ringan & cepat) -->
+                <button
+                  id="video-poster-overlay"
+                  type="button"
+                  aria-label="Putar Video Dokumentasi"
+                  class="absolute inset-0 z-20 w-full h-full flex flex-col items-center justify-center bg-on-surface group cursor-pointer focus:outline-none"
+                >
+                  <img
+                    id="video-poster-img"
+                    src="assets/images/video-thumbs/video-6.jpg"
+                    alt="Thumbnail Video Dokumentasi"
+                    class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/20"></div>
+                  <div class="relative z-10 flex flex-col items-center gap-2.5 px-4 text-center">
+                    <span class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary/95 group-hover:bg-primary text-white flex items-center justify-center shadow-2xl border-2 border-white/80 group-hover:scale-110 transition-all">
+                      <span class="material-symbols-outlined text-[36px] sm:text-[44px] ml-0.5">play_arrow</span>
+                    </span>
+                    <span class="px-3.5 py-1 rounded-full bg-black/65 text-white text-xs font-bold tracking-wide border border-white/20">
+                      Ketuk untuk Memutar Video
+                    </span>
+                  </div>
+                </button>
               </div>
-              <div class="p-6">
+              <div class="p-4 sm:p-6">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <span id="active-video-badge" class="px-3 py-1 rounded-lg bg-primary text-white text-xs font-bold">
                     Video 01 • Budidaya &amp; Panen Cabai
@@ -636,17 +674,17 @@
                     Kebun Cabai Desa Sumber Makmur
                   </span>
                 </div>
-                <h4 id="active-video-title" class="text-xl font-extrabold text-on-surface mt-1">
+                <h4 id="active-video-title" class="text-lg sm:text-xl font-extrabold text-on-surface mt-1">
                   Pemeliharaan &amp; Pemetikan Buah Cabai Rawit di Lahan Petani
                 </h4>
-                <p id="active-video-desc" class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                <p id="active-video-desc" class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
                   Dokumentasi jarak dekat perawatan tanaman dan pemetikan buah cabai rawit segar langsung dari pohon oleh petani anggota Kelompok Tani Mekar Jaya.
                 </p>
               </div>
             </div>
 
-            <!-- 5 Videos Interactive Playlist Column (5 Cols) -->
-            <div class="lg:col-span-5 flex flex-col gap-3" id="video-playlist-container"></div>
+            <!-- 6 Videos Interactive Playlist Column (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-2.5 sm:gap-3 w-full" id="video-playlist-container"></div>
           </div>
         </div>
       </section>
