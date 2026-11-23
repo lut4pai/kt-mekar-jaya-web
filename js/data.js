@@ -288,7 +288,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
   videos: [
     {
       id: "vid-01",
-      videoUrl: "assets/videos/video-1.mp4",
+      videoUrl: "assets/videos/video-1.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-6.jpg",
       badge: "Video 01 • Budidaya & Panen Cabai",
       title: "Pemeliharaan & Pemetikan Buah Cabai Rawit di Lahan Petani",
@@ -298,7 +298,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-02",
-      videoUrl: "assets/videos/video-2.mp4",
+      videoUrl: "assets/videos/video-2.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-1.jpg",
       badge: "Video 02 • Teknologi Lahan",
       title: "Praktik Pengukuran pH & Kesuburan Tanah Lahan Kebun",
@@ -308,7 +308,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-03",
-      videoUrl: "assets/videos/video-3.mp4",
+      videoUrl: "assets/videos/video-3.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-2.jpg",
       badge: "Video 03 • Pascapanen Cabai",
       title: "Seleksi & Pemeriksaan Kualitas Fisik Cabai Rawit Segar",
@@ -318,7 +318,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-04",
-      videoUrl: "assets/videos/video-4.mp4",
+      videoUrl: "assets/videos/video-4.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-3.jpg",
       badge: "Video 04 • Administrasi & Sortasi",
       title: "Kegiatan Sortasi Panen & Pencatatan Pembukuan Tani",
@@ -328,7 +328,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-05",
-      videoUrl: "assets/videos/video-5.mp4",
+      videoUrl: "assets/videos/video-5.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-4.jpg",
       badge: "Video 05 • Analisis Sampel Tanah",
       title: "Pembacaan Indikator Digital Alat Ukur Kesuburan Tanah",
@@ -338,7 +338,7 @@ window.KT_MEKAR_JAYA_DEFAULT_DATA = {
     },
     {
       id: "vid-06",
-      videoUrl: "assets/videos/video-6.mp4",
+      videoUrl: "assets/videos/video-6.mp4?v=hd",
       thumbnail: "assets/images/video-thumbs/video-5.jpg",
       badge: "Video 06 • Gudang Alsintan & Saprodi",
       title: "Peninjauan Gudang Traktor Tangan & Stok Pupuk Poktan",
