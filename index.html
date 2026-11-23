@@ -122,8 +122,6 @@
       }
     };
   </script>
-  <!-- Supabase JS SDK via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-surface font-sans text-base text-on-surface antialiased relative selection:bg-primary selection:text-white">
 
@@ -179,14 +177,6 @@
       <!-- Action & Mobile Trigger -->
       <div class="flex items-center gap-2.5 shrink-0">
         <a
-          href="admin.html"
-          class="hidden sm:inline-flex items-center gap-1.5 border border-outline-variant/70 bg-surface-container-low/70 hover:bg-surface-container text-on-surface text-xs font-bold px-3.5 py-2.5 rounded-xl transition-colors whitespace-nowrap"
-          title="Buka Portal Admin Pengurus"
-        >
-          <span class="material-symbols-outlined text-[17px] text-primary">admin_panel_settings</span>
-          <span>Portal Admin</span>
-        </a>
-        <a
           class="inline-flex items-center justify-center bg-primary text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap"
           href="#kontak"
         >
@@ -212,12 +202,6 @@
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#visi-misi">Visi &amp; Misi (2026–2029)</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kegiatan">Program Kerja Bidang</a>
       <a class="block py-2.5 px-3 rounded-xl hover:bg-surface-container-low text-sm text-on-surface font-semibold" href="#kontak">Kontak, WA &amp; Instagram</a>
-      <div class="pt-2 mt-2 border-t border-outline-variant/30">
-        <a class="flex items-center gap-2 py-2.5 px-3 rounded-xl bg-surface-container text-sm text-primary font-bold" href="admin.html">
-          <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
-          Buka Portal Admin Pengurus
-        </a>
-      </div>
     </div>
   </header>
 
@@ -580,14 +564,6 @@
                 Alsintan &amp; Gudang
               </button>
             </div>
-
-            <a
-              href="admin.html"
-              class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"
-            >
-              <span class="material-symbols-outlined text-[16px]">add_photo_alternate</span>
-              <span>Tambah / Edit Kegiatan di Portal Admin</span>
-            </a>
           </div>
         </div>
 
@@ -1547,21 +1523,13 @@
 
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
         <p>© 2026 Kelompok Tani Mekar Jaya (KTMJ), Desa Sumber Makmur — Kec. Mentaya Hilir Utara.</p>
-        <div class="flex items-center gap-4">
-          <a href="admin.html" class="font-bold text-primary hover:underline inline-flex items-center gap-1">
-            <span class="material-symbols-outlined text-[15px]">admin_panel_settings</span>
-            <span>Portal Admin</span>
-          </a>
-          <span>Sistem Informasi Profil &amp; Hortikultura Desa</span>
-        </div>
+        <span>Sistem Informasi Profil &amp; Hortikultura Desa</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
-  <script src="js/supabase-config.js"></script>
-  <script src="js/supabase-client.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

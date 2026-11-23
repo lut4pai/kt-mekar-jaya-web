@@ -2,13 +2,14 @@
  * ============================================================================
  * FRONTEND CONTROLLER - KELOMPOK TANI MEKAR JAYA (KTMJ)
  * ============================================================================
- * - Memuat data secara dinamis dari Supabase / LocalStorage (via KTMJDataService)
- * - Merender Slide Foto Kegiatan Berukuran Besar (Horizontal Carousel) yang rapi
+ * - Memuat data langsung dari `js/data.js` (`window.KT_MEKAR_JAYA_DATA`)
+ * - Merender Slide Foto Kegiatan Berukuran Besar (Horizontal Carousel)
+ * - Merender Pemutar & Daftar Putar 5 Video Dokumentasi Google Drive
  * - Merender Daftar 29 Anggota Resmi sesuai SK Kepala Desa 2026–2029
  * - Mengelola Lightbox Modal, Filter Galeri, Navigasi Mobile & Accordion
  */
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
   // 1. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenuPanel = document.getElementById("mobile-menu-panel");
@@ -34,14 +35,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // 2. Load Site Data (Supabase atau LocalStorage / Default SK)
-  let siteData = window.KT_MEKAR_JAYA_DEFAULT_DATA;
-  if (window.KTMJDataService && typeof window.KTMJDataService.loadSiteData === "function") {
-    const res = await window.KTMJDataService.loadSiteData();
-    if (res && res.data) {
-      siteData = res.data;
-    }
-  }
+  // 2. Load Site Data langsung dari js/data.js
+  const siteData = window.KT_MEKAR_JAYA_DATA || window.KT_MEKAR_JAYA_DEFAULT_DATA || {};
 
   // 3. Apply Dynamic Text & Contacts to DOM without breaking HTML typography
   function applyDynamicContent(data) {

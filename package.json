@@ -2,11 +2,11 @@
   "name": "website-kt-mekar-jaya",
   "version": "1.0.0",
   "private": true,
-  "description": "Website Profil Resmi & Portal Admin Kelompok Tani Mekar Jaya (KTMJ) Desa Sumber Makmur, Kec. Mentaya Hilir Utara, Kab. Kotawaringin Timur",
+  "description": "Website Landing Page Profil Resmi Kelompok Tani Mekar Jaya (KTMJ) Desa Sumber Makmur, Kec. Mentaya Hilir Utara, Kab. Kotawaringin Timur",
   "scripts": {
     "dev": "npx serve . -l 3000",
     "start": "npx serve . -l 3000",
-    "build": "echo 'Static build ready for Vercel deployment'"
+    "build": "echo 'Static landing page ready for Vercel deployment'"
   },
   "keywords": [
     "kelompok-tani",
@@ -15,7 +15,6 @@
     "sumber-makmur",
     "mentaya-hilir-utara",
     "kotawaringin-timur",
-    "supabase",
     "vercel"
   ]
 }
